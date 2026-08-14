@@ -10,7 +10,7 @@
 * Prabhrajwin Singh (Roll No: `1024160024`)
 * Ishmanjot Singh (Roll No: `1024160016`)
 
-**Lab Instructor**: Dr. Raghav B. Venkataramaiyer
+**Lab Instructor**: Jeelani Asif
 
 ---
 

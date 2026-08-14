@@ -10,7 +10,7 @@
 2. **Prabhrajwin Singh** (Roll No: `1024160024`) — *Puppeteer & Async Queue Backend Lead*
 3. **Ishmanjot Singh** (Roll No: `1024160016`) — *NLP Policy Engine & Verification Logic Lead*
 
-**Lab Instructor:** Dr. Raghav B. Venkataramaiyer
+**Lab Instructor:** Jeelani Asif
 
 ---
 
