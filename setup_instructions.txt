@@ -1,0 +1,35 @@
+PrivaLens Project Git & Pages Setup Guide
+
+This guide explains how to initialize your Software Engineering (UCS503) repository using the configured files.
+
+Step 1: Fork and Rename the Template on GitHub
+1. Open your browser and navigate to:
+   https://github.com/tiet-ucs503/ucs503p-202627odd-template
+2. Click "Fork" in the top-right corner.
+3. Rename the repository: "ucs503p-202627-privalens"
+4. Click "Create fork".
+
+Step 2: Clone Your Fork Locally
+Open your terminal (PowerShell/CMD) and clone the repository:
+   git clone https://github.com/<YOUR-GITHUB-USERNAME>/ucs503p-202627-privalens.git
+   cd ucs503p-202627-privalens
+
+Step 3: Copy Pre-Configured Files
+Copy all files and folders (including docs, journals, project-proposal, mkdocs.yml, PrivaLens_Proposal.pptx, README.md) from C:\Users\NAMAN ARORA\.gemini\antigravity\scratch\PrivaLens_Setup\ directly into your cloned repository folder. Overwrite existing files when prompted.
+
+Step 4: Commit and Push
+In your cloned repository terminal, run:
+   git add .
+   git commit -m "Initialize PrivaLens metadata, journals, LaTeX proposal, and presentation"
+   git push origin master
+(Note: If your default branch is main, push to main instead).
+
+Step 5: Enable GitHub Pages
+1. Go to your repository on GitHub.
+2. Click on the "Actions" tab and wait for the "mkdocs" workflow run to complete successfully.
+3. Go to "Settings" -> "Pages" (left sidebar).
+4. Under "Build and deployment":
+   - Source: Deploy from a branch
+   - Branch: gh-pages, folder: / (root)
+   - Click "Save".
+5. Your project site will be live at: https://<YOUR-GITHUB-USERNAME>.github.io/ucs503p-202627-privalens/

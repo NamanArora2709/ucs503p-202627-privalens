@@ -60,32 +60,153 @@
 \begin{document}
 \maketitle
 
-\section{Higher-order goal}
-The project aims to improve consumer digital rights and automated regulatory enforcement. While modern data privacy regulations (like GDPR and India's DPDP Act 2023) are comprehensive on paper, small businesses, open-source projects, and individual developers struggle to verify if their live applications actually comply. The engineering goal of \textbf{PrivaLens} is to translate complex data privacy guidelines into a verifiable, automated software auditing pipeline.
+\section{Higher-order goal%
+  \BvrHint{\ldots secondary framing}}
+The project aims to safeguard digital privacy rights and automate the verification of regulatory compliance (such as EU GDPR and India's DPDP Act 2023). While these privacy frameworks impose strict legal mandates, small businesses, open-source developers, and startups frequently struggle to verify compliance due to complex third-party scripts. The immediate engineering objective of \textbf{PrivaLens} is to translate compliance auditing into a measurable, automated software verification solution.
 
-\section{Time-to-value}
+\section{Time-to-value %
+\BvrHint{\ldots primary heuristic}}
 \begin{itemize}[leftmargin=0.7cm]
-    \item \textbf{Increment 1 (Week 4):} Establish a headless browser request interception shell to capture outgoing traffic and cookie events.
-    \item \textbf{Increment 2 (Week 7):} Introduce an asynchronous job queue (Redis/Bull) to coordinate multi-page scans without causing server timeouts.
-    \item \textbf{Increment 3 (Week 12):} Deploy a rule-based NLP parser classifying core privacy policy paragraphs and comparing them against runtime tracking tags.
-    \item \textbf{Increment 4 (Week 15):} Deliver a unified Next.js dashboard containing detailed compliance scorecards and PDF audit reports.
+    \item We will deliver meaningful increments quickly by prototyping the headless traffic interception engine and validating PII detection accuracy early.
+    \item We will prioritize fast feedback over perfection by using weekly iterations backed by CI/CD automation to test the compliance scoring algorithm.
+    \item Success is defined by producing a fully functional single-page scan containing network logs and static policy parsing within the first iteration.
 \end{itemize}
 
 \section{Problem Statement}
-Modern web applications suffer from hidden, unconsented telemetry due to deep dependency trees and third-party script ingestion. Key challenges include:
+Modern web applications integrate numerous external dependencies, widgets, and analytical trackers, exposing them to compliance violations. Key bottlenecks include:
 \begin{itemize}[leftmargin=0.7cm]
-    \item \textbf{PII Exfiltration:} Form inputs, cookies, and network request parameters leak personal identifiable information (PII) to ad servers.
-    \item \textbf{Policy vs. Reality Mismatch:} Privacy policies claim ``no tracking'' or ``no data sharing,'' yet live network packets actively transmit tracking identifiers to external brokers.
-    \item \textbf{High Cost of Compliance:} Hiring professional legal and compliance auditors is cost-prohibitive for startups and small-scale publishers.
-    \item \textbf{Linter Limitations:} Static code analyzers fail to intercept dynamic script loading and runtime data transmissions.
+    \item \textbf{PII Exfiltration:} Form fields and cookies transmit personal identifiable information (names, emails, IPs) to third-party endpoints.
+    \item \textbf{Policy vs. Reality Mismatch:} Privacy policies verbally claim ``we do not track users,'' yet dynamic runtime telemetry actively transfers tracking keys to advertising brokers.
+    \item \textbf{High Legal Overhead:} Startups lack the financial resources to hire specialized privacy auditing teams to review site updates.
+    \item \textbf{Linter Limitations:} Static code analyzers fail to catch dynamic runtime traffic, third-party script loads, or tag manager modifications.
 \end{itemize}
 
-\section{Proposed Solution}
-We propose \textbf{PrivaLens}, an end-to-end compliance scanning service composed of:
+\section{Proposed Solution %
+\BvrHint{\ldots Software Proposition}}
+\subsection{Overview}
+Build a \textbf{web-based} Privacy & Regulatory Compliance Scanner with the following components:
 \begin{itemize}[leftmargin=0.7cm]
-    \item \textbf{Interactive Client Dashboard:} A Next.js portal where developers initiate crawls, monitor live traffic captures via WebSockets, and view compliance scores.
-    \item \textbf{Headless Scraper & Queue:} A Node.js environment utilizing Puppeteer to crawl targets and monitor HTTP/WebSocket payloads. Jobs are orchestrated asynchronously using Redis and Bull.
-    \item \textbf{Policy NLP Engine:} A Python service utilizing SpaCy/transformers to classify privacy clauses, compare them against runtime requests, and persist results in PostgreSQL.
+    \item \textbf{Scan Submission Portal:} An interactive dashboard where users input target URLs to initiate scans.
+    \item \textbf{Headless Traffic Interceptor:} A headless browser environment that crawls target pages and records network interactions.
+    \item \textbf{NLP Policy Analyzer:} An NLP pipeline that parses site privacy text to extract statements regarding user data collection.
+    \item \textbf{Compliance & Discrepancy Scorecard:} A detailed dashboard rendering a compliance audit log and corrective suggestions.
 \end{itemize}
+
+\subsection{Core workflow}
+\begin{enumerate}[leftmargin=0.7cm]
+    \item Developer submits their website URL to the PrivaLens dashboard.
+    \item The backend adds the URL to the asynchronous scan queue (Redis/Bull).
+    \item A Puppeteer worker executes a headless crawl, logging all outgoing request payloads, cookies, and external domains.
+    \item A Python microservice parses the target site's Privacy Policy page to identify data-sharing clauses using text classification.
+    \item PrivaLens cross-references the live network logs against the NLP-parsed policy claims to build a discrepancy matrix.
+    \item The frontend displays a compliance scorecard with severity ratings and downloadable PDF remediation reports.
+\end{enumerate}
+
+\subsection{Operational constraints for an educational setting}
+\begin{itemize}[leftmargin=0.7cm]
+    \item Design the crawler to avoid overloading target servers; keep the scope limited to academic demonstration.
+    \item Utilize lightweight NLP text classification libraries (such as SpaCy) to keep computation boundaries predictable.
+    \item Ensure the application is deployable on containerized local staging or standard cloud virtual machines.
+\end{itemize}
+
+\section{Solution Approach %
+\BvrHint{\ldots Engineering focus}}
+This project focuses on building a resilient, asynchronous web system and legal-tech workflow, rather than novel machine learning architecture.
+
+\subsection{Discrepancy and compliance detection %
+\BvrHint{\ldots non-research}}
+Data mapping and mismatch flagging will be rule-based and classification-guided:
+\begin{itemize}[leftmargin=0.7cm]
+    \item Categorize network requests by target domain using community-maintained lists (e.g., EasyList, Disconnect).
+    \item Use simple NLP text classifiers to identify policy paragraphs addressing collection categories (e.g., ``analytics'', ``marketing'').
+    \item Compare the two sets: if marketing domains are active but the policy denies advertising cookies, flag a discrepancy.
+\end{itemize}
+
+\subsection{Web architecture %
+\BvrHint{\ldots web-based solution}}
+A decoupled 3-tier web architecture:
+\begin{itemize}[leftmargin=0.7cm]
+    \item \textbf{Frontend:} Next.js responsive client serving uploader forms, live progress bars, and scorecards.
+    \item \textbf{Backend & Worker Queue:} Node.js API server coordinating a Bull/Redis task queue for Puppeteer crawlers.
+    \item \textbf{NLP Engine & Storage:} Python FastAPI microservice handling policy text parsing, and a PostgreSQL database storing scan histories.
+\end{itemize}
+
+\subsection{CI/CD and fast delivery enabler}
+CI/CD pipelines will be configured to:
+\begin{itemize}[leftmargin=0.7cm]
+    \item Run automated unit tests on the network interceptor on every push.
+    \item Build the Next.js static pages and verify endpoint health automatically.
+    \item Publish updated MkDocs documentation to GitHub Pages via Git actions.
+\end{itemize}
+
+\section{Evaluation Criterion %
+\BvrHint{\ldots measurable and attributable}}
+We define the success of PrivaLens using measurable project metrics.
+
+\subsection{Primary evaluation metric}
+\textbf{Scan-to-Report Latency (SRL):} The duration from when a user submits a URL to the generation of the compliance scorecard.
+\begin{itemize}[leftmargin=0.7cm]
+    \item Target: Median SRL $\le$ 30 seconds for a 5-page crawl.
+    \item Attribution: Measured via worker start and completion timestamps logged in PostgreSQL.
+\end{itemize}
+
+\subsection{Secondary evaluation metrics}
+\begin{itemize}[leftmargin=0.7cm]
+    \item \textbf{Request Capture Rate:} Percentage of outbound HTTP/WebSocket requests correctly intercepted and logged by Puppeteer compared to standard browser DevTools.
+    \item \textbf{Policy Paragraph Recall:} Accuracy of the NLP classifier in identifying clauses related to data collection (Target $\ge$ 85\%).
+    \item \textbf{Job Completion Reliability:} Uptime and successful processing rate of the background job worker under concurrent loads.
+\end{itemize}
+
+\subsection{Pilot validation plan %
+\BvrHint{\ldots high-level}}
+\begin{itemize}[leftmargin=0.7cm]
+    \item Audit 10 popular web domains with known tracking configurations and published privacy policies.
+    \item Verify compliance scanner accuracy by comparing PrivaLens scorecard alerts against manual network inspections.
+\end{itemize}
+
+\section{Scalability %
+\BvrHint{\ldots with foresight}}
+\begin{enumerate}[leftmargin=0.7cm]
+    \item \textbf{Scalable (theoretically):} Decoupling the frontend from the resource-intensive crawler worker ensures UI requests remain responsive even under high scan loads.
+    \item \textbf{Operationally deployable (practically):} The complete system is containerized with Docker, enabling automated scaling of headless browser workers.
+\end{enumerate}
+
+\section{Engine availability heuristic}
+A mature set of software tooling is available for implementation:
+\begin{itemize}[leftmargin=0.7cm]
+    \item Puppeteer for browser automation and request interception.
+    \item Bull and Redis for robust distributed task queues.
+    \item SpaCy and transformers for policy classification.
+    \item Next.js and Tailwind CSS for dashboard development.
+    \item PostgreSQL for relational scan history storage.
+\end{itemize}
+
+\section{Project scope and deliverables %
+\BvrHint{\ldots iteration-friendly}}
+\subsection{Initial deliverable %
+\BvrHint{\ldots first iteration}}
+\begin{itemize}[leftmargin=0.7cm]
+    \item Headless crawler engine capturing HTTP traffic.
+    \item Simple UI for scan initiation and basic progress logs.
+    \item SQLite/PostgreSQL persistence for basic crawl summaries.
+    \item Basic layout-checking parser for policy text.
+\end{itemize}
+
+\subsection{Subsequent deliverables}
+\begin{itemize}[leftmargin=0.7cm]
+    \item Asynchronous job queue integration (Bull/Redis).
+    \item Text-classification model mapping clauses to tracking categories.
+    \item Comprehensive PDF compliance scorecard export.
+    \item Multi-page crawling and deep request payload analysis.
+\end{itemize}
+
+\section{Risks and mitigations}
+\begin{itemize}[leftmargin=0.7cm]
+    \item \textbf{Crawler Blocking:} Target sites using anti-bot/WAF configurations might block the Puppeteer scraper. Mitigated by utilizing custom user-agent strings and delayed request pacing.
+    \item \textbf{Complex Policy Formatting:} Some privacy policies use irregular HTML layout formatting. Mitigated by using unified text extraction libraries that isolate raw readable paragraphs.
+\end{itemize}
+
+\section{Summary}
+This project proposes **PrivaLens**, a deployable web service to automate data privacy and regulatory compliance checks. It fits the UCS503P syllabus by emphasizing time-to-value, asynchronous architecture, measurable performance metrics (Scan-to-Report Latency), and strict software engineering guidelines over research-driven algorithms.
 
 \end{document}

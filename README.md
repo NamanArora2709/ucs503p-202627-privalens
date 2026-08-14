@@ -1,67 +1,52 @@
-# PrivaLens Project Git & Pages Setup Guide
+# PrivaLens - Automated Web Privacy & Regulatory Compliance Scanner
 
-This directory contains pre-configured files to initialize your Software Engineering (UCS503) project template for **PrivaLens**.
-
-## Step-by-Step Setup Instructions
-
-### Step 1: Fork and Rename the Template on GitHub
-1. Open your browser and navigate to the official master template repository:
-   👉 [tiet-ucs503/ucs503p-202627odd-template](https://github.com/tiet-ucs503/ucs503p-202627odd-template)
-2. In the top-right corner, click **Fork**.
-3. Under **Repository name**, name your fork:
-   `ucs503p-202627-privalens`
-4. Click **Create fork**.
+**Course Project for UCS503: Software Engineering**  
+**Department of Computer Science & Engineering, TIET Patiala**
 
 ---
 
-### Step 2: Clone Your Fork Locally
-Open your command prompt or terminal and clone your newly forked repository:
-```bash
-# Replace <YOUR-GITHUB-USERNAME> with your actual GitHub username
-git clone https://github.com/<YOUR-GITHUB-USERNAME>/ucs503p-202627-privalens.git
-cd ucs503p-202627-privalens
+## 👥 Group Members & Roles
+1. **Naman Arora** (Roll No: `1024160029`) — *Frontend UI & Audit Reports Lead*
+2. **Prabhrajwin Singh** (Roll No: `1024160024`) — *Puppeteer & Async Queue Backend Lead*
+3. **Ishmanjot Singh** (Roll No: `1024160016`) — *NLP Policy Engine & Verification Logic Lead*
+
+**Lab Instructor:** Dr. Raghav B. Venkataramaiyer
+
+---
+
+## 📌 Project Overview
+**PrivaLens** is a dynamic, automated compliance scanning platform that audits web applications for privacy violations under frameworks like the EU GDPR and India's DPDP Act 2023. By crawling pages, simulating interactions, and sniffing runtime network requests, PrivaLens identifies hidden third-party tracking scripts, cookie compliance errors, and potential PII leakage. It then cross-references these live network flows against the website's published Privacy Policy using NLP (Natural Language Processing) text classification, alerting owners to mismatches and generating actionable PDF remediation reports.
+
+---
+
+## 🏗️ System Architecture
+PrivaLens utilizes a decoupled microservices design:
+* **Frontend Web Dashboard (React / Next.js):** Submission forms, live scan monitoring via WebSockets, and interactive compliance scorecards.
+* **Crawler & Queue Microservice (Node.js + Puppeteer + Redis / Bull):** Headless browser environment simulating real user visits and capturing network payloads.
+* **NLP Processing Engine (Python + FastAPI + SpaCy):** Text extraction and paragraph classification of privacy policies to identify legal commitments.
+* **Persistence & History (PostgreSQL):** Relational schema storing historic scans, domain analytics, and audit trials.
+
+---
+
+## 📂 Directory Structure
+* [**`project-proposal/`**](./project-proposal) — Contains the LaTeX source (`main.tex`) and compiled PDF for the project proposal.
+* [**`journals/`**](./journals) — Weekly progress logs for each team member:
+  * [Naman Arora (`1024160029-naman`)](./journals/1024160029-naman/)
+  * [Prabhrajwin Singh (`1024160024-prabhrajwin`)](./journals/1024160024-prabhrajwin/)
+  * [Ishmanjot Singh (`1024160016-ishmanjot`)](./journals/1024160016-ishmanjot/)
+* [**`docs/`**](./docs) — Source markdown files for the documentation website published via GitHub Pages.
+* [**`code/`**](./code) — Raw project source code and implementation layers.
+* [**`assets/`**](./assets) — Shared graphical resources and static assets.
+
+---
+
+## 🚀 Running Local Documentation
+To view and compile a local dev version of the project documentation:
+```shell
+# Install dependencies
+pip install -r pyproject.toml
+
+# Run the local MkDocs server
+make docs
 ```
-
----
-
-### Step 3: Copy Pre-Configured Files
-Copy the customized files from the `PrivaLens_Setup` folder on your system into your cloned repository directory. You should overwrite existing files when prompted:
-
-* **MkDocs Configuration:** Copy `mkdocs.yml` to the root folder.
-* **Homepage Documentation:** Copy `docs/index.md` into the `docs/` folder.
-* **Student Journals:** Copy the `journals/` folder into the root folder (it contains folders for Naman, Prabhrajwin, and Ishmanjot).
-* **Project Proposal LaTeX:** Copy `project-proposal/main.tex` into the `project-proposal/` folder.
-
----
-
-### Step 4: Commit and Push Changes
-Once files are copied, stage, commit, and push them using git:
-```bash
-# Check the status of modified files
-git status
-
-# Add all changes
-git add .
-
-# Commit with a descriptive message
-git commit -m "Initialize PrivaLens project settings, journals, and LaTeX proposal"
-
-# Push to your repository
-git push origin master
-```
-*(Note: If your default branch is `main`, use `git push origin main` instead).*
-
----
-
-### Step 5: Enable GitHub Pages
-Once pushed, GitHub Actions will automatically start a workflow run called `mkdocs` to build your documentation site and push it to a new branch named `gh-pages`.
-
-1. Go to your repository on GitHub: `https://github.com/<YOUR-GITHUB-USERNAME>/ucs503p-202627-privalens`
-2. Click on the **Actions** tab at the top and wait for the latest workflow run to finish successfully (turns green).
-3. Go to **Settings** (top navigation bar) ➔ **Pages** (under the "Code and automation" section in the left sidebar).
-4. Under **Build and deployment**:
-   * **Source:** Select `Deploy from a branch`.
-   * **Branch:** Select `gh-pages` and `/ (root)`.
-   * Click **Save**.
-5. After a few moments, your project documentation website will be live at:
-   `https://<YOUR-GITHUB-USERNAME>.github.io/ucs503p-202627-privalens/`
+The documentation will be live locally at `http://127.0.0.1:8000/`.
