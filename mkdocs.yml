@@ -1,5 +1,5 @@
 site_name: "PrivaLens - Automated Web Privacy & Regulatory Compliance Scanner"
-site_url: https://namanarora-29.github.io/ucs503p-202627-privalens
+site_url: https://NamanArora2709.github.io/ucs503p-202627-privalens
 
 plugins:
 - search
@@ -40,13 +40,13 @@ theme:
   logo: assets/tiet-logo.svg
   favicon: assets/favicon.png
 
-repo_url: https://github.com/namanarora-29/ucs503p-202627-privalens
+repo_url: https://github.com/NamanArora2709/ucs503p-202627-privalens
 repo_name: ucs503p-202627-privalens
 copyright: "Copyright &copy; 2026 Naman Arora, Prabhrajwin Singh, Ishmanjot Singh • UCS503 Software Engineering"
 extra:
   social:
   - icon: fontawesome/brands/github
-    link: https://github.com/namanarora-29/ucs503p-202627-privalens
+    link: https://github.com/NamanArora2709/ucs503p-202627-privalens
     name: Git Repo for PrivaLens
 
 extra_css:
