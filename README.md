@@ -6,9 +6,9 @@
 ---
 
 ## 👥 Group Members & Roles
-1. **Naman Arora** (Roll No: `1024160029`) — *Frontend UI & Audit Reports Lead*
-2. **Prabhrajwin Singh** (Roll No: `1024160024`) — *Puppeteer & Async Queue Backend Lead*
-3. **Ishmanjot Singh** (Roll No: `1024160016`) — *NLP Policy Engine & Verification Logic Lead*
+1. **Naman Arora** (Roll No: `1024160029`) 
+2. **Prabhrajwin Singh** (Roll No: `1024160024`) 
+3. **Ishmanjot Singh** (Roll No: `1024160016`) 
 
 **Lab Instructor:** Jeelani Asif
 
