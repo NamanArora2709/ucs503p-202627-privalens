@@ -1,7 +1,7 @@
 # Weekly Progress Journal — Prabhrajwin Singh (Roll No: 1024160024)
 
 **Project Name:** PrivaLens (Automated Privacy & Regulatory Compliance Scanner)
-**Role:** System Architect & DFD Designer
+**Role:** Backend & Crawler Lead, System Architect & DFD Designer
 
 ---
 
@@ -24,3 +24,13 @@
   - **Level 1 (Process Detail):** Visualizing input, crawling, parsing, scoring, and databases.
   - **Level 2 (Sub-Process Detail):** Detailing request matching logic.
 - Managed coordinate mapping and curved arrows to ensure a zero-overlap, readable layout.
+
+## Week 5 (Aug 31 - Sep 6): Relational DB Modeling & Diagram Verification
+- Designed the PostgreSQL relational database schema for storing scan audits, tracking beacon logs, cookie attributes, and discrepancy records.
+- Verified and refined the Level 1 and Level 2 TikZ Data Flow Diagram coordinate anchors alongside Naman.
+- Defined microservice communication contracts between the crawler sniffer and the discrepancy matching engine.
+
+## Week 6 (Sep 7 - Sep 13): Headless Sniffer & Real-Time PII Exfiltration Detection Engine
+- Developed the Node.js network sniffer module capable of live HTTP fetching, script tag extraction, and DOM network inspection.
+- Built the known third-party tracker identification database (Google Analytics, Meta/Facebook Pixel, Criteo, Hotjar, TikTok, DoubleClick, etc.).
+- Implemented the dynamic PII leak detector using regex pattern matching across URL query parameters and headers (catching exposed emails, phone numbers, auth tokens, and healthcare telemetry).

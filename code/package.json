@@ -1,0 +1,25 @@
+{
+  "name": "privalens-prototype-demo",
+  "version": "0.3.0",
+  "description": "PrivaLens - Automated Web Privacy & Regulatory Compliance Scanner (Prototype Demo v0.3 - Sept 2026)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "privacy",
+    "compliance",
+    "gdpr",
+    "dpdp",
+    "scanner",
+    "nlp",
+    "discrepancy-detection"
+  ],
+  "author": "Naman Arora (Lead), Prabhrajwin Singh, Ishmanjot Singh",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  }
+}

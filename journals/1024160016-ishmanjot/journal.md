@@ -1,7 +1,7 @@
 # Weekly Progress Journal — Ishmanjot Singh (Roll No: 1024160016)
 
 **Project Name:** PrivaLens (Automated Privacy & Regulatory Compliance Scanner)
-**Role:** ML Rules Analyst & Legal Compliance Researcher
+**Role:** ML & NLP Policy Parser Lead, Legal Compliance Researcher
 
 ---
 
@@ -21,3 +21,13 @@
 - Collaborated on proofreading the proposal deck and LaTeX files.
 - Assisted in checking code blocks and compiling DFD and Use Case diagrams.
 - Cleaned up document formatting and adjusted author metadata under instructor instructions.
+
+## Week 5 (Aug 31 - Sep 6): Legal Clause Taxonomy & Discrepancy Matrix Formulation
+- Defined the formal classification taxonomy for privacy policies, mapping legal clauses to GDPR Articles 6/12/32 and DPDP Act 2023 Sections 5/8/16.
+- Formulated the penalty deduction weights and scoring criteria for the automated Compliance Health Score (0–100 scale).
+- Coordinated with the team to align Gantt milestone deadlines with regulatory research targets.
+
+## Week 6 (Sep 7 - Sep 13): NLP Policy Classification Engine & Test Suite Development
+- Implemented the rule-based NLP policy extraction and paragraph segmentation engine (`nlpParser.js`).
+- Coded automated intent taggers identifying restrictive promises (e.g. "no third-party ad tracking", "strictly essential cookies") vs permissive claims.
+- Developed the 3 preloaded real-world demonstration datasets (E-Commerce Ad Tracker Mismatch, Healthcare PII Exfiltration, and GDPR-Compliant SaaS) for the live prototype demo.

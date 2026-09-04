@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrivaLens - Automated Web Privacy & Compliance Scanner (Demo v0.3)</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- TOP APP BAR -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-emerald-500/20">
+          <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
+        </div>
+        <div>
+          <div class="flex items-center space-x-2">
+            <span class="font-bold text-lg tracking-tight text-white">PrivaLens</span>
+            <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-full font-medium">Prototype v0.3</span>
+          </div>
+          <p class="text-xs text-slate-400">Automated Privacy & Regulatory Compliance Scanner</p>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center space-x-4 text-xs text-slate-400">
+        <div class="flex items-center space-x-1.5 bg-slate-800/80 border border-slate-700/60 px-3 py-1.5 rounded-lg">
+          <i data-lucide="users" class="w-3.5 h-3.5 text-indigo-400"></i>
+          <span>Lead: <strong class="text-slate-200">Naman Arora</strong> | Prabhrajwin | Ishmanjot</span>
+        </div>
+        <div class="bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 px-3 py-1.5 rounded-lg font-medium">
+          TIET Patiala • UCS503
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- SCANNER HERO INPUT SECTION -->
+    <section class="mb-8" id="scanner-section">
+      <div class="bg-gradient-to-b from-slate-900 to-slate-900/60 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-3xl mb-6">
+          <h1 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            Audit Web Privacy Policies Against <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-indigo-400">Runtime Code Reality</span>
+          </h1>
+          <p class="text-sm text-slate-400 mt-2">
+            PrivaLens simulates browser traffic to sniff third-party ad beacons, cookies, and PII exfiltration, then applies NLP to verify commitments under GDPR & India's DPDP Act 2023.
+          </p>
+        </div>
+
+        <!-- URL INPUT BAR -->
+        <form id="scan-form" class="space-y-4">
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div class="relative flex-grow">
+              <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+                <i data-lucide="globe" class="w-5 h-5"></i>
+              </div>
+              <input
+                type="text"
+                id="url-input"
+                placeholder="Enter target website URL (e.g., https://example-store.com)"
+                value="https://shopvibe-store.test"
+                class="w-full pl-11 pr-4 py-3.5 bg-slate-950/80 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition text-sm shadow-inner"
+              />
+            </div>
+            <button
+              type="submit"
+              id="scan-button"
+              class="px-6 py-3.5 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-bold rounded-xl shadow-lg shadow-emerald-500/20 flex items-center justify-center space-x-2 transition transform active:scale-95 text-sm"
+            >
+              <i data-lucide="play" class="w-4 h-4 fill-current"></i>
+              <span>Launch Scan</span>
+            </button>
+          </div>
+
+          <!-- DEMO PRESETS BAR -->
+          <div class="pt-2">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-xs font-semibold uppercase tracking-wider text-slate-400 flex items-center gap-1">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400"></i>
+                Sample Demo Targets:
+              </span>
+              <button type="button" class="preset-btn active-preset" data-preset="ecommerce-ad-trackers">
+                🛒 E-Commerce (ShopVibe - Ad Trackers)
+              </button>
+              <button type="button" class="preset-btn" data-preset="healthcare-pii-leak">
+                🏥 Healthcare Portal (PII Exfiltration)
+              </button>
+              <button type="button" class="preset-btn" data-preset="saas-gdpr-compliant">
+                🛡️ PrivaFlow SaaS (GDPR Compliant)
+              </button>
+            </div>
+          </div>
+
+          <!-- CUSTOM POLICY COLLAPSIBLE -->
+          <div class="pt-2">
+            <button type="button" id="toggle-custom-policy" class="text-xs text-indigo-400 hover:text-indigo-300 flex items-center space-x-1 transition">
+              <i data-lucide="chevron-right" id="policy-chevron" class="w-3.5 h-3.5 transition-transform"></i>
+              <span>Override with Custom Privacy Policy Text (Optional)</span>
+            </button>
+            <div id="custom-policy-container" class="hidden mt-3">
+              <textarea
+                id="custom-policy-input"
+                rows="4"
+                placeholder="Paste published privacy policy text here to run NLP clause segmentation..."
+                class="w-full p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-indigo-500 font-mono"
+              ></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- LIVE SCAN PROGRESS SIMULATOR -->
+    <section id="scan-progress-section" class="hidden mb-8">
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></div>
+            <h3 class="text-sm font-semibold text-white">PrivaLens Inspection Pipeline Running...</h3>
+          </div>
+          <span id="progress-percentage" class="text-xs font-mono font-bold text-emerald-400">0%</span>
+        </div>
+
+        <!-- PROGRESS BAR -->
+        <div class="w-full bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800 mb-6">
+          <div id="progress-bar-fill" class="bg-gradient-to-r from-emerald-500 to-indigo-500 h-2 rounded-full w-0 transition-all duration-300"></div>
+        </div>
+
+        <!-- PIPELINE STEPS -->
+        <div class="grid grid-cols-1 sm:grid-cols-5 gap-3 text-xs" id="pipeline-steps">
+          <div class="step-card" id="step-1">
+            <i data-lucide="radio" class="w-4 h-4 mb-1 text-slate-400"></i>
+            <span class="font-medium">1. Sniff Traffic</span>
+            <span class="text-[10px] text-slate-500 mt-0.5">Capturing Beacons</span>
+          </div>
+          <div class="step-card" id="step-2">
+            <i data-lucide="cookie" class="w-4 h-4 mb-1 text-slate-400"></i>
+            <span class="font-medium">2. Audit Storage</span>
+            <span class="text-[10px] text-slate-500 mt-0.5">Logging Cookies</span>
+          </div>
+          <div class="step-card" id="step-3">
+            <i data-lucide="file-text" class="w-4 h-4 mb-1 text-slate-400"></i>
+            <span class="font-medium">3. NLP Parsing</span>
+            <span class="text-[10px] text-slate-500 mt-0.5">Clause Taxonomy</span>
+          </div>
+          <div class="step-card" id="step-4">
+            <i data-lucide="git-compare" class="w-4 h-4 mb-1 text-slate-400"></i>
+            <span class="font-medium">4. Match Matrix</span>
+            <span class="text-[10px] text-slate-500 mt-0.5">Discrepancy Check</span>
+          </div>
+          <div class="step-card" id="step-5">
+            <i data-lucide="award" class="w-4 h-4 mb-1 text-slate-400"></i>
+            <span class="font-medium">5. Scorecard</span>
+            <span class="text-[10px] text-slate-500 mt-0.5">Final Health Grade</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCAN RESULTS DASHBOARD -->
+    <section id="results-section" class="hidden space-y-6">
+
+      <!-- TOP SCORECARD OVERVIEW -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+
+          <!-- Target Info -->
+          <div class="space-y-2">
+            <div class="flex items-center space-x-2">
+              <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20" id="res-domain">shopvibe-store.test</span>
+              <span class="text-xs text-slate-500" id="res-timestamp">Just now</span>
+            </div>
+            <h2 class="text-xl font-bold text-white" id="res-title">ShopVibe E-Commerce Store</h2>
+            <p class="text-xs text-slate-400 max-w-xl" id="res-summary">
+              Scanned target site against published privacy commitments. Found conflicting tracking beacons.
+            </p>
+          </div>
+
+          <!-- Score Gauge Card -->
+          <div class="flex items-center space-x-6 bg-slate-950/80 border border-slate-800/80 p-4 rounded-xl">
+            <div class="text-center">
+              <div class="text-3xl font-black text-emerald-400" id="score-display">100</div>
+              <div class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold mt-0.5">Health Score</div>
+            </div>
+            <div class="h-10 w-px bg-slate-800"></div>
+            <div class="text-center">
+              <div class="text-2xl font-black text-emerald-400 px-3 py-0.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20" id="grade-badge">A</div>
+              <div class="text-[10px] text-slate-400 font-medium mt-1" id="grade-status">Compliant</div>
+            </div>
+            <button
+              id="print-report-btn"
+              class="hidden sm:flex items-center space-x-1.5 px-3 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium rounded-lg border border-slate-700 transition"
+            >
+              <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+              <span>Export PDF</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- KPI METRIC CARDS -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 pt-6 border-t border-slate-800/80">
+          <div class="metric-box">
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-slate-400">Trackers Detected</span>
+              <i data-lucide="activity" class="w-4 h-4 text-amber-400"></i>
+            </div>
+            <div class="text-xl font-bold text-white mt-2" id="kpi-trackers">0</div>
+          </div>
+          <div class="metric-box">
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-slate-400">Cookies Logged</span>
+              <i data-lucide="cookie" class="w-4 h-4 text-blue-400"></i>
+            </div>
+            <div class="text-xl font-bold text-white mt-2" id="kpi-cookies">0</div>
+          </div>
+          <div class="metric-box">
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-slate-400">PII Leak Risks</span>
+              <i data-lucide="alert-triangle" class="w-4 h-4 text-rose-400"></i>
+            </div>
+            <div class="text-xl font-bold text-white mt-2" id="kpi-pii">0</div>
+          </div>
+          <div class="metric-box">
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-slate-400">Policy Discrepancies</span>
+              <i data-lucide="git-pull-request" class="w-4 h-4 text-indigo-400"></i>
+            </div>
+            <div class="text-xl font-bold text-white mt-2" id="kpi-discrepancies">0</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABBED DEEP-DIVE INSPECTOR -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+
+        <!-- TAB NAVIGATION -->
+        <div class="flex border-b border-slate-800 bg-slate-950/60 overflow-x-auto">
+          <button class="tab-btn active-tab" data-tab="tab-discrepancies">
+            <i data-lucide="scale" class="w-4 h-4"></i>
+            <span>Discrepancy Matrix</span>
+            <span class="badge-count" id="badge-discrepancies">0</span>
+          </button>
+          <button class="tab-btn" data-tab="tab-network">
+            <i data-lucide="network" class="w-4 h-4"></i>
+            <span>Network Beacons & Payloads</span>
+            <span class="badge-count" id="badge-network">0</span>
+          </button>
+          <button class="tab-btn" data-tab="tab-cookies">
+            <i data-lucide="database" class="w-4 h-4"></i>
+            <span>Cookies & Storage</span>
+            <span class="badge-count" id="badge-cookies">0</span>
+          </button>
+          <button class="tab-btn" data-tab="tab-nlp">
+            <i data-lucide="brain" class="w-4 h-4"></i>
+            <span>NLP Policy Clauses</span>
+            <span class="badge-count" id="badge-nlp">0</span>
+          </button>
+        </div>
+
+        <!-- TAB CONTENT AREA -->
+        <div class="p-6">
+
+          <!-- TAB 1: DISCREPANCY MATRIX -->
+          <div id="tab-discrepancies" class="tab-pane active space-y-4">
+            <div class="flex items-center justify-between mb-2">
+              <h4 class="text-sm font-semibold text-white">Policy Commitments vs Runtime Telemetry Cross-Check</h4>
+              <span class="text-xs text-slate-400">Audited under GDPR & DPDP Act 2023 Rules</span>
+            </div>
+            <div id="discrepancies-list" class="space-y-4">
+              <!-- Dynamically rendered -->
+            </div>
+          </div>
+
+          <!-- TAB 2: NETWORK SNIFFER -->
+          <div id="tab-network" class="tab-pane hidden space-y-4">
+            <div class="flex items-center justify-between mb-2">
+              <h4 class="text-sm font-semibold text-white">Intercepted HTTP/WebSocket Network Beacons</h4>
+              <span class="text-xs text-slate-400" id="network-count-summary">0 requests recorded</span>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs text-slate-300">
+                <thead class="text-[11px] uppercase tracking-wider text-slate-400 bg-slate-950/80 border-b border-slate-800">
+                  <tr>
+                    <th class="py-2.5 px-3">Method</th>
+                    <th class="py-2.5 px-3">Destination Domain / URL</th>
+                    <th class="py-2.5 px-3">Category</th>
+                    <th class="py-2.5 px-3">Tracker Identifier</th>
+                    <th class="py-2.5 px-3">Risk</th>
+                  </tr>
+                </thead>
+                <tbody id="network-table-body" class="divide-y divide-slate-800/60 font-mono">
+                  <!-- Dynamically rendered -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TAB 3: COOKIES & STORAGE -->
+          <div id="tab-cookies" class="tab-pane hidden space-y-4">
+            <div class="flex items-center justify-between mb-2">
+              <h4 class="text-sm font-semibold text-white">Browser Cookies & Persistence Audit</h4>
+              <span class="text-xs text-slate-400" id="cookies-count-summary">0 cookies identified</span>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs text-slate-300">
+                <thead class="text-[11px] uppercase tracking-wider text-slate-400 bg-slate-950/80 border-b border-slate-800">
+                  <tr>
+                    <th class="py-2.5 px-3">Cookie Name</th>
+                    <th class="py-2.5 px-3">Domain</th>
+                    <th class="py-2.5 px-3">Category</th>
+                    <th class="py-2.5 px-3">Lifespan</th>
+                    <th class="py-2.5 px-3">Security Flags</th>
+                  </tr>
+                </thead>
+                <tbody id="cookies-table-body" class="divide-y divide-slate-800/60 font-mono">
+                  <!-- Dynamically rendered -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TAB 4: NLP POLICY CLAUSES -->
+          <div id="tab-nlp" class="tab-pane hidden space-y-4">
+            <div class="flex items-center justify-between mb-2">
+              <h4 class="text-sm font-semibold text-white">NLP Policy Clause Extraction & Taxonomy</h4>
+              <span class="text-xs text-slate-400">Classified using SpaCy Pattern Rules</span>
+            </div>
+            <div id="nlp-clauses-list" class="space-y-3">
+              <!-- Dynamically rendered -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 mt-12 py-6 text-center text-xs text-slate-500">
+    <p>PrivaLens Prototype v0.3 • Designed & Developed for UCS503 Software Engineering</p>
+    <p class="mt-1">Thapar Institute of Engineering and Technology (TIET) • Academic Year 2026-27</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,7 +1,10 @@
 ## Python.gitignore
 ## ----------------------------------------------------
 
-﻿assets/icons/
+node_modules/
+.DS_Store
+
+assets/icons/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
