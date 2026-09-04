@@ -191,11 +191,11 @@ Documentation will be accessible at: `http://127.0.0.1:8000/`
 
 This project is developed as part of **UCS503P: Software Engineering Project** at **Thapar Institute of Engineering and Technology (TIET), Patiala** under the supervision of **Dr. Jeelani Asif**.
 
-| Name | Roll Number | Email | Department | Project Responsibilities |
-| :--- | :--- | :--- | :--- | :--- |
-| **Naman Arora** *(Project Lead)* | `1024160029` | [`narora2_be24@thapar.edu`](mailto:narora2_be24@thapar.edu) | Computer Science & Engineering | Full-Stack Architecture, Next.js/Tailwind Dashboard, UML/DFD Modeling, Git & Gantt Management |
-| **Prabhrajwin Singh** | `1024160024` | [`pkhurana1_be24@thapar.edu`](mailto:pkhurana1_be24@thapar.edu) | Computer Science & Engineering | Headless Crawler Sniffer, Tracker Database, PII Exfiltration Detector, PostgreSQL DB Schema |
-| **Ishmanjot Singh** | `1024160016` | [`isingh6_be24@thapar.edu`](mailto:isingh6_be24@thapar.edu) | Computer Science & Engineering | NLP Policy Parser, Legal Clause Taxonomy (GDPR & DPDP), Discrepancy Scoring Logic, Demo Datasets |
+| Name | Roll Number | Email | Department |
+| :--- | :--- | :--- | :--- |
+| **Naman Arora** | `1024160029` | [`narora2_be24@thapar.edu`](mailto:narora2_be24@thapar.edu) | Computer Science & Engineering |
+| **Prabhrajwin Singh** | `1024160024` | [`pkhurana1_be24@thapar.edu`](mailto:pkhurana1_be24@thapar.edu) | Computer Science & Engineering |
+| **Ishmanjot Singh** | `1024160016` | [`isingh6_be24@thapar.edu`](mailto:isingh6_be24@thapar.edu) | Computer Science & Engineering |
 
 ---
 
