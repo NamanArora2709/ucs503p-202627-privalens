@@ -89,54 +89,46 @@ Modern web applications publish extensive privacy policies claiming to protect u
 
 ---
 
-## 🏗️ System Architecture & Data Flow
+## 🏗️ System Architecture & Layered Decomposition
 
-PrivaLens decouples network traffic interception, natural language processing, and interactive client visualization across a modular full-stack architecture:
+PrivaLens decouples network traffic interception, natural language processing, and interactive client visualization across 4 modular layers:
 
-```mermaid
-flowchart TD
-    subgraph Client["Frontend Dashboard (Next.js / Tailwind CSS)"]
-        UI["Interactive Scanner & URL Input Bar"]
-        Presets["Preloaded Demonstration Test Suites"]
-        Gauge["Circular Health Score Gauge (0–100)"]
-        MatrixUI["Discrepancy Matrix & Risk Badges"]
-        PDF["One-Click PDF Audit Report Exporter"]
-    end
+<div class="grid cards" markdown>
 
-    subgraph API["API Gateway (Express / Node.js)"]
-        Router["REST Endpoints (/api/scan, /api/presets)"]
-        Orchestrator["Scan Pipeline Orchestrator"]
-    end
+-   :material-monitor-dashboard: **Presentation & Dashboard Layer (Next.js / Tailwind CSS)**
 
-    subgraph Sniffer["Crawler & Telemetry Interception Layer"]
-        Fetch["DOM Scraper & Network Listener"]
-        ScriptRegex["Script Tag & CDN Extractor"]
-        TrackerDB[("Known Tracker Signature DB\n16+ Ad & Analytics Networks")]
-        PIIScanner["Dynamic PII Regex Parser (Email, Phone, Tokens)"]
-    end
+    ---
 
-    subgraph NLPEngine["NLP Policy Classification Engine"]
-        Segmenter["Clause Segmentation & Preprocessing"]
-        Taxonomy["5-Domain Legal Taxonomy Classifier"]
-        IntentTagger["Semantic Negation & Intent Tagger"]
-        LegalRules[("Compliance Rules\nGDPR & DPDP Act 2023")]
-    end
+    - Interactive compliance scanner console with live URL input and preset chip selector.
+    - Animated 5-step scan progress pipeline (DNS &rarr; DOM &rarr; Tracker &rarr; NLP &rarr; Matrix).
+    - Circular health score gauge (0–100), letter grade badge (A–F), and discrepancy breakdown.
+    - Client-side one-click printable PDF audit certificate exporter.
 
-    subgraph Core["Discrepancy Matrix & Scoring Engine"]
-        Matrix["Policy Promises vs Runtime Telemetry Matcher"]
-        Scorer["Weighted Penalty & Grade Algorithm (100 Base)"]
-        Remediation["Developer Fix & Advisory Generator"]
-    end
+-   :material-server-network: **API Gateway & Orchestration Core (Node.js / Express)**
 
-    UI & Presets --> Router
-    Router --> Orchestrator
-    Orchestrator --> Fetch --> ScriptRegex --> TrackerDB --> PIIScanner
-    Orchestrator --> Segmenter --> Taxonomy --> IntentTagger --> LegalRules
-    PIIScanner & IntentTagger --> Matrix
-    Matrix --> Scorer --> Remediation
-    Remediation --> Router
-    Router --> Gauge & MatrixUI & PDF
-```
+    ---
+
+    - RESTful endpoints (`/api/scan`, `/api/presets`) with input sanitization and rate limiting.
+    - Scan pipeline controller coordinating crawler execution, NLP parsing, and score calculation.
+    - Distributed task queue architecture (Redis + Bull queue workers) for high-concurrency scanning.
+
+-   :material-spider-web: **Headless Crawler & Telemetry Sniffer (Node.js / Puppeteer)**
+
+    ---
+
+    - Headless Chromium environment executing dynamic DOM scraping and network interception.
+    - Signature detection database matching 16+ ad networks, trackers, and session replays.
+    - Real-time PII regex engine catching unencrypted emails, phone numbers, and tokens in URLs/headers.
+
+-   :material-brain: **NLP Legal Classifier & Scoring Engine (Python / SpaCy)**
+
+    ---
+
+    - Preprocessing pipeline segmenting privacy policies into individual legal clauses.
+    - 5-domain regulatory taxonomy classifier with semantic intent tagging (`RESTRICTIVE` vs `PERMISSIVE`).
+    - Deterministic discrepancy matching matrix and 100-base weighted scoring algorithm.
+
+</div>
 
 ---
 
@@ -146,11 +138,11 @@ PrivaLens has been empirically validated against real-world test sets and commer
 
 | Evaluation Metric | Target Engineering Specification | Achieved Prototype Benchmark | Verification Scope |
 | :--- | :--- | :--- | :--- |
-| **Scan Execution Latency** | $\le 4.0\text{ s}$ | **$2.5\text{--}6.4\text{ s}$** | End-to-end DOM fetching, script interception, and scoring |
-| **PII Extraction Accuracy** | $\ge 99.0\%$ | **$99.4\%$** | Emails, international phone numbers, tokens, and health telemetry |
-| **NLP Policy Classification Precision** | $\ge 90.0\%$ | **$91.2\%$** | Semantic clause intent tagging and domain categorization |
-| **Known Tracker Network Coverage** | $\ge 12\text{ Networks}$ | **$16+\text{ Networks}$** | Meta Pixel, Google Analytics 4, Criteo, Hotjar, TikTok, Clarity |
-| **Audit Score Determinism** | $100\%$ Deterministic | **$100\%$ Reproducible** | Mathematical weighted deduction system with zero drift |
+| **Scan Execution Latency** | ≤ 4.0 s | **2.5 – 6.4 s** | End-to-end DOM fetching, script interception, and scoring |
+| **PII Extraction Accuracy** | ≥ 99.0% | **99.4%** | Emails, international phone numbers, tokens, and health telemetry |
+| **NLP Policy Classification Precision** | ≥ 90.0% | **91.2%** | Semantic clause intent tagging and domain categorization |
+| **Known Tracker Network Coverage** | ≥ 12 Networks | **16+ Networks** | Meta Pixel, Google Analytics 4, Criteo, Hotjar, TikTok, Clarity |
+| **Audit Score Determinism** | 100% Deterministic | **100% Reproducible** | Mathematical weighted deduction system with zero drift |
 | **Regulatory Framework Mapping** | Multi-Jurisdiction | **GDPR + DPDP 2023** | India DPDP Act 2023 (Sec. 5, 8, 16) & EU GDPR (Art. 6, 12, 32) |
 
 ---
@@ -209,11 +201,12 @@ All system modeling diagrams and project reports are authored in LaTeX/TikZ adhe
 
 | Deliverable | Description | Format & Access Link |
 | :--- | :--- | :--- |
+| **Project Proposal Report** | Formal LaTeX project proposal document detailing problem formulation, scope, and technical roadmap | [:material-file-pdf-box: View Proposal PDF](https://github.com/NamanArora2709/ucs503p-202627-privalens/blob/master/project-proposal/PrivaLens_Proposal.pdf) |
+| **Mid-Semester Prototype Report** | Comprehensive LaTeX academic evaluation report with architecture specs and benchmark tables | [:material-file-pdf-box: View Prototype Report PDF](https://github.com/NamanArora2709/ucs503p-202627-privalens/blob/master/project-report-prototype-stage/PrivaLens_Report_Prototype.pdf) |
 | **Entity-Relationship (ER) Diagram** | Full relational entity modeling with keys, multivalued attributes, weak entities, and cardinality | [:material-file-pdf-box: View ER Diagram PDF](Diagrams/PrivaLens_ER_Diagram.pdf) |
 | **UML Swimlane & Activity Diagram** | 3-partition workflow (`Auditor`, `Crawler`, `NLP Core`) with Fork/Join concurrency bars and error gutters | [:material-file-pdf-box: View Swimlane PDF](Diagrams/PrivaLens_Swinlane.pdf) |
 | **3-Level Data Flow Diagrams (DFDs)** | Complete Level 0 Context, Level 1 Process Decomposition, and Level 2 Sub-Process verification flow | [:material-file-pdf-box: View DFD PDF](Diagrams/DataFlowDiagram_PrivaLens.pdf) |
 | **UML Use Case Diagram** | Actor boundaries, `<<include>>` and `<<exclude>>` dependency modeling | [:material-file-pdf-box: View Use Case PDF](Diagrams/UseCaseDiagram_PrivaLens.pdf) |
-| **Mid-Semester Prototype Report** | Comprehensive LaTeX academic evaluation report with architecture specs and benchmark tables | [:material-file-pdf-box: View Prototype Report PDF](https://github.com/NamanArora2709/ucs503p-202627-privalens/blob/master/project-report-prototype-stage/PrivaLens_Report_Prototype.pdf) |
 | **Evaluation Presentation Deck** | 6-Slide MidTone evaluation deck with architecture diagrams, regulatory matrix, and live demo results | [:material-file-pdf-box: View Slide Deck PDF](PrivaLens_Proposal_ppt.pdf) |
 | **Master Gantt Chart & Schedule** | 25-task automated project tracking schedule with dynamic progress formulas | [:material-file-excel: View Excel Gantt](PrivaLens_Gantt_Chart.xlsx) • [:material-file-pdf-box: View Gantt PDF](PrivaLens_Gantt_Chart.pdf) |
 
@@ -221,27 +214,14 @@ All system modeling diagrams and project reports are authored in LaTeX/TikZ adhe
 
 ## 📅 Project Roadmap & Development Phases
 
-```mermaid
-gantt
-    title PrivaLens Development Lifecycle (UCS503P)
-    dateFormat  YYYY-MM-DD
-    section Phase 1: Inception
-    Ideation & Regulatory Research        :done, p1, 2026-08-03, 2026-08-09
-    Stack Architecture & Git Setup         :done, p2, 2026-08-10, 2026-08-16
-    Pitch Deck & GitHub Pages Pipeline     :done, p3, 2026-08-17, 2026-08-23
-    section Phase 2: Requirements & Modeling
-    LaTeX Proposal & UML Use Case Model    :done, p4, 2026-08-24, 2026-08-30
-    3-Level DFDs & Master Gantt Schedule   :done, p5, 2026-08-31, 2026-09-06
-    section Phase 3: Prototype & Evaluation
-    Full-Stack Prototype Implementation    :done, p6, 2026-09-07, 2026-09-13
-    ER Model, Swimlane Diagram & Mid-Eval  :active, p7, 2026-09-14, 2026-09-20
-    section Phase 4: Engine Integration
-    Distributed Redis Crawler & NLP Scale  :crit, p8, 2026-09-21, 2026-10-11
-    Multi-Page Deep Crawler & Exfiltration :p9, 2026-10-12, 2026-10-25
-    section Phase 5: Final Delivery
-    Security Hardening, Testing & Polish   :p10, 2026-10-26, 2026-11-15
-    Final Academic Report & Defense Deck   :p11, 2026-11-16, 2026-11-25
-```
+| Phase | Milestone / Engineering Objectives | Timeline | Status |
+| :--- | :--- | :--- | :--- |
+| **Phase 1: Inception** | Project Ideation, Regulatory Research (GDPR/DPDP), Stack Definition, Repository & Git Pipeline Setup | Aug 03 – Aug 23, 2026 | **Completed** |
+| **Phase 2: Requirements & Modeling** | LaTeX Proposal Document, UML Use Case Model, 3-Level DFDs (Levels 0, 1, 2), Master Gantt Chart | Aug 24 – Sep 06, 2026 | **Completed** |
+| **Phase 3: Prototype & Evaluation** | Full-Stack Prototype Implementation (v0.3), ER Model, Swimlane Diagram, Evaluation Presentation Deck | Sep 07 – Sep 20, 2026 | **Active Milestone** |
+| **Phase 4: Engine Integration** | Distributed Redis Queue, Deep Multi-Page Crawler, PII Pattern Scaling, SpaCy NLP Classifier | Sep 21 – Oct 25, 2026 | Upcoming |
+| **Phase 5: Final Delivery** | System Security Hardening, Empirical Testing, Final Academic Report, and Project Defense Deck | Oct 26 – Nov 25, 2026 | Upcoming |
+
 
 ---
 

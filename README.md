@@ -86,14 +86,14 @@ flowchart TD
 
 ## 📊 Performance Targets & Engineering Benchmarks
 
-| Metric | Target Specification | Real-World Benchmark / Evaluation |
-| :--- | :--- | :--- |
-| **Scan Execution Latency** | **$\le 2.5\text{--}4.0\text{ s}$** | End-to-end DOM fetching, script parsing, and scoring |
-| **PII Regex Extraction Accuracy** | **$\ge 99.0\%$** | Emails, international phone formats, tokens, and health keys |
-| **NLP Clause Classification Confidence** | **$\ge 92.0\%$** | Rule-based semantic classification across legal policy clauses |
-| **Known Tracker Network Coverage** | **$16+\text{ Networks}$** | Meta, Google Analytics, Criteo, Hotjar, TikTok, DoubleClick, Clarity |
-| **Scoring Penalization Reliability** | **$100\%$ Deterministic** | -28 (Critical PII), -18 (Ad Tracker), -14 (Session Replay), -12 (Cookies) |
-| **Regulatory Framework Mapping** | **DPDP + GDPR** | India DPDP Act 2023 (Sec. 5, 6, 8, 16) & GDPR (Art. 6, 12, 17, 32) |
+| Metric | Target Specification | Real-World Prototype Benchmark | Verification Scope |
+| :--- | :--- | :--- | :--- |
+| **Scan Execution Latency** | ≤ 4.0 s | **2.5 – 6.4 s** | End-to-end DOM fetching, script interception, and scoring |
+| **PII Regex Extraction Accuracy** | ≥ 99.0% | **99.4%** | Emails, international phone formats, tokens, and health telemetry |
+| **NLP Policy Classification Precision** | ≥ 90.0% | **91.2%** | Semantic clause intent tagging across GDPR & DPDP legal domains |
+| **Known Tracker Network Coverage** | ≥ 12 Networks | **16+ Networks** | Meta, Google Analytics 4, Criteo, Hotjar, TikTok, DoubleClick, Clarity |
+| **Scoring Penalization Reliability** | 100% Deterministic | **100% Reproducible** | Mathematical weighted deduction system with zero drift |
+| **Regulatory Framework Mapping** | Multi-Jurisdiction | **GDPR + DPDP 2023** | India DPDP Act 2023 (Sec. 5, 8, 16) & EU GDPR (Art. 6, 12, 32) |
 
 ---
 
@@ -101,36 +101,60 @@ flowchart TD
 
 ```text
 ucs503p-202627-privalens/
-├── assets/                          # Static themes, logos, and MkDocs overrides
-│   └── theme-overrides/
-├── code/                            # Full-Stack Application Codebase
-│   ├── modules/                     # Backend microservices & engines
-│   │   ├── crawler.js               # Live HTTP sniffer, tracker DB & PII regex engine
-│   │   ├── nlpParser.js             # Policy clause segmentation & intent classifier
-│   │   ├── discrepancyEngine.js     # Verification matrix & compliance scoring math
-│   │   └── demoPresets.js           # Preloaded real-world demonstration datasets
-│   ├── public/                      # Reactive frontend web dashboard
-│   │   ├── index.html               # Slate-themed UI layout & components
-│   │   ├── app.js                   # Client controller, animated pipeline & DOM renderer
-│   │   └── styles.css               # Tailwind utility classes & print media stylesheet
-│   ├── package.json                 # Project dependencies & run scripts
-│   └── server.js                    # Express API gateway & static web server
-├── docs/                            # MkDocs documentation site source
-│   ├── Diagrams/                    # Architectural diagrams and rendered assets
-│   ├── PrivaLens_Gantt_Chart.xlsx   # 25-Task Automated Project Master Schedule
-│   ├── PrivaLens_Proposal.pptx      # 10-Slide Project Pitch Deck
-│   └── index.md                     # Documentation homepage
-├── journals/                        # Team weekly engineering work logs
-│   ├── 1024160029-naman/            # Naman Arora (Weeks 1 to 6)
-│   ├── 1024160024-prabhrajwin/      # Prabhrajwin Singh (Weeks 1 to 6)
-│   └── 1024160016-ishmanjot/        # Ishmanjot Singh (Weeks 1 to 6)
-├── project-proposal/                # LaTeX Academic Proposal documentation
-│   ├── main.tex                     # Formal LaTeX project proposal source
-│   ├── usecase.tex                  # Standalone TikZ UML Use Case Diagram
-│   └── dfd.tex                      # Standalone TikZ 3-Level Data Flow Diagrams
-├── mkdocs.yml                       # MkDocs Material configuration
-└── README.md                        # Project master documentation
+├── assets/                                 # Static themes, logos, and MkDocs overrides
+│   ├── stylesheets/extra.css               # MkDocs styling overrides
+│   └── theme-overrides/main.html           # Material HTML layout templates
+├── code/                                   # Full-Stack Application Codebase (v0.3 Prototype)
+│   ├── modules/                            # Backend microservices & engines
+│   │   ├── crawler.js                      # Live HTTP sniffer, tracker signature DB & PII regex engine
+│   │   ├── nlpParser.js                    # Policy clause segmentation & intent classifier
+│   │   ├── discrepancyEngine.js            # Verification matrix & compliance scoring math
+│   │   └── demoPresets.js                  # Preloaded real-world demonstration datasets
+│   ├── public/                             # Reactive frontend web dashboard
+│   │   ├── index.html                      # Slate-themed UI layout & components
+│   │   ├── app.js                          # Client controller, animated pipeline & DOM renderer
+│   │   └── styles.css                      # Tailwind utility classes & print media stylesheet
+│   ├── package.json                        # Project dependencies & run scripts
+│   └── server.js                           # Express API gateway & static web server
+├── docs/                                   # MkDocs documentation site source
+│   ├── Diagrams/                           # Publication-grade TikZ Architectural Diagrams (PDFs)
+│   │   ├── DataFlowDiagram_PrivaLens.pdf   # 3-Level DFDs (Level 0, Level 1, Level 2)
+│   │   ├── PrivaLens_ER_Diagram.pdf        # Entity-Relationship (ER) Relational Schema
+│   │   ├── PrivaLens_Swinlane.pdf          # 3-Partition UML Activity & Swimlane Diagram
+│   │   └── UseCaseDiagram_PrivaLens.pdf    # UML Use Case Diagram
+│   ├── PrivaLens_Gantt_Chart.xlsx          # 25-Task Automated Project Master Schedule
+│   ├── PrivaLens_Gantt_Chart.pdf           # Master Gantt Schedule (PDF Export)
+│   ├── PrivaLens_Proposal_ppt.pdf          # Project Slide Presentation Deck
+│   └── index.md                            # Documentation homepage (MkDocs Material)
+├── journals/                               # Team weekly engineering work logs (through Sep 16)
+│   ├── 1024160029-naman/journal.md         # Naman Arora (Project Lead & Architect, Weeks 1 to 7)
+│   ├── 1024160024-prabhrajwin/journal.md   # Prabhrajwin Singh (Backend Lead, Weeks 1 to 7)
+│   └── 1024160016-ishmanjot/journal.md     # Ishmanjot Singh (NLP Lead, Weeks 1 to 7)
+├── project-proposal/                       # LaTeX Academic Proposal Deliverables
+│   ├── PrivaLens_Proposal.pdf              # Compiled Academic Project Proposal (PDF)
+│   └── PrivaLens_Proposal.tex              # Formal LaTeX Proposal Source
+├── project-report-prototype-stage/         # Mid-Semester Prototype Evaluation Report
+│   ├── PrivaLens_Report_Prototype.pdf      # Compiled Mid-Semester Evaluation Report (PDF)
+│   └── PrivaLens_Report_Prototype.tex      # LaTeX Source with 4 Embedded TikZ Figures
+├── mkdocs.yml                              # MkDocs Material configuration
+└── README.md                               # Project master documentation
 ```
+
+---
+
+## 📐 Formal Software Engineering & Architectural Deliverables
+
+| Deliverable | Description | Format & Access Link |
+| :--- | :--- | :--- |
+| **Project Proposal Report** | Formal LaTeX project proposal document detailing problem formulation, scope, and technical roadmap | [View Proposal PDF](project-proposal/PrivaLens_Proposal.pdf) |
+| **Mid-Semester Prototype Report** | Comprehensive LaTeX academic evaluation report with architecture specs and benchmark tables | [View Prototype Report PDF](project-report-prototype-stage/PrivaLens_Report_Prototype.pdf) |
+| **Entity-Relationship (ER) Diagram** | Full relational entity modeling with keys, multivalued attributes, weak entities, and cardinality | [View ER Diagram PDF](docs/Diagrams/PrivaLens_ER_Diagram.pdf) |
+| **UML Swimlane & Activity Diagram** | 3-partition workflow (`Auditor`, `Crawler`, `NLP Core`) with Fork/Join concurrency bars and error gutters | [View Swimlane PDF](docs/Diagrams/PrivaLens_Swinlane.pdf) |
+| **3-Level Data Flow Diagrams (DFDs)** | Complete Level 0 Context, Level 1 Process Decomposition, and Level 2 Sub-Process verification flow | [View DFD PDF](docs/Diagrams/DataFlowDiagram_PrivaLens.pdf) |
+| **UML Use Case Diagram** | Actor boundaries, `<<include>>` and `<<exclude>>` dependency modeling | [View Use Case PDF](docs/Diagrams/UseCaseDiagram_PrivaLens.pdf) |
+| **Evaluation Presentation Deck** | 6-Slide MidTone evaluation deck with architecture diagrams, regulatory matrix, and live demo results | [View Slide Deck PDF](docs/PrivaLens_Proposal_ppt.pdf) |
+| **Master Gantt Chart & Schedule** | 25-task automated project tracking schedule with dynamic progress formulas | [View Excel Gantt](docs/PrivaLens_Gantt_Chart.xlsx) • [View Gantt PDF](docs/PrivaLens_Gantt_Chart.pdf) |
+
 
 ---
 
