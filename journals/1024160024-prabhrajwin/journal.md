@@ -34,3 +34,9 @@
 - Developed the Node.js network sniffer module capable of live HTTP fetching, script tag extraction, and DOM network inspection.
 - Built the known third-party tracker identification database (Google Analytics, Meta/Facebook Pixel, Criteo, Hotjar, TikTok, DoubleClick, etc.).
 - Implemented the dynamic PII leak detector using regex pattern matching across URL query parameters and headers (catching exposed emails, phone numbers, auth tokens, and healthcare telemetry).
+
+## Week 7 (Sep 14 - Sep 20 / till Sep 16): Crawler Benchmarking, Redis Worker Queue & Report Inputs
+- Assisted Naman on the architectural specifications for the distributed crawler job queue (Redis + Bull queue workers).
+- Integrated Redis connection handlers and worker dispatch listeners into the Express API gateway.
+- Conducted latency and resource benchmarking for headless Puppeteer execution across 10 sample commercial domains, achieving an average 6.4s scan turnaround.
+- Provided technical inputs and crawler performance metrics for Section 2.2.1 and Table 3.1 of the Prototype Evaluation Report.

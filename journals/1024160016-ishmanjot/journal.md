@@ -31,3 +31,9 @@
 - Implemented the rule-based NLP policy extraction and paragraph segmentation engine (`nlpParser.js`).
 - Coded automated intent taggers identifying restrictive promises (e.g. "no third-party ad tracking", "strictly essential cookies") vs permissive claims.
 - Developed the 3 preloaded real-world demonstration datasets (E-Commerce Ad Tracker Mismatch, Healthcare PII Exfiltration, and GDPR-Compliant SaaS) for the live prototype demo.
+
+## Week 7 (Sep 14 - Sep 20 / till Sep 16): Regulatory Taxonomy Validation, Benchmark Metric Testing & Report Contributions
+- Assisted Naman on the regulatory mapping rules in the Prototype Evaluation Report, verifying compliance references against GDPR (Articles 6, 12, 13, 32) and India's DPDP Act 2023 (Sections 5, 8, 16).
+- Executed empirical test runs on the NLP policy extraction engine across 15 real-world corporate privacy policies to validate classification accuracy (achieving 91.2% precision on consent clause segmentation).
+- Formulated test scenarios to evaluate penalty score weightings in the compliance health calculator, confirming zero false-positive flags on legitimate analytics declarations.
+- Contributed regulatory analysis, taxonomy definitions, and benchmark validation data for Sections 2.2.2 and 4.2 of the Mid-Semester Prototype Evaluation Report.
