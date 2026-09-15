@@ -134,6 +134,7 @@ ucs503p-202627-privalens/
 │   ├── PrivaLens_Proposal.pdf              # Compiled Academic Project Proposal (PDF)
 │   └── PrivaLens_Proposal.tex              # Formal LaTeX Proposal Source
 ├── project-report-prototype-stage/         # Mid-Semester Prototype Evaluation Report
+│   ├── PrivaLens_Prototype_Presentation.pdf # MidTone Prototype Evaluation Deck (PDF)
 │   ├── PrivaLens_Report_Prototype.pdf      # Compiled Mid-Semester Evaluation Report (PDF)
 │   └── PrivaLens_Report_Prototype.tex      # LaTeX Source with 4 Embedded TikZ Figures
 ├── mkdocs.yml                              # MkDocs Material configuration
@@ -147,12 +148,13 @@ ucs503p-202627-privalens/
 | Deliverable | Description | Format & Access Link |
 | :--- | :--- | :--- |
 | **Project Proposal Report** | Formal LaTeX project proposal document detailing problem formulation, scope, and technical roadmap | [View Proposal PDF](project-proposal/PrivaLens_Proposal.pdf) |
+| **Project Proposal Pitch Deck** | Initial 10-slide project pitch presentation deck covering motivation, architecture, and regulatory scope | [View Pitch Deck PDF](docs/PrivaLens_Proposal_ppt.pdf) |
 | **Mid-Semester Prototype Report** | Comprehensive LaTeX academic evaluation report with architecture specs and benchmark tables | [View Prototype Report PDF](project-report-prototype-stage/PrivaLens_Report_Prototype.pdf) |
+| **Mid-Semester Prototype Presentation** | 6-Slide MidTone evaluation deck with architecture diagrams, regulatory matrix, and live demo results | [View Prototype Deck PDF](project-report-prototype-stage/PrivaLens_Prototype_Presentation.pdf) |
 | **Entity-Relationship (ER) Diagram** | Full relational entity modeling with keys, multivalued attributes, weak entities, and cardinality | [View ER Diagram PDF](docs/Diagrams/PrivaLens_ER_Diagram.pdf) |
 | **UML Swimlane & Activity Diagram** | 3-partition workflow (`Auditor`, `Crawler`, `NLP Core`) with Fork/Join concurrency bars and error gutters | [View Swimlane PDF](docs/Diagrams/PrivaLens_Swinlane.pdf) |
 | **3-Level Data Flow Diagrams (DFDs)** | Complete Level 0 Context, Level 1 Process Decomposition, and Level 2 Sub-Process verification flow | [View DFD PDF](docs/Diagrams/DataFlowDiagram_PrivaLens.pdf) |
 | **UML Use Case Diagram** | Actor boundaries, `<<include>>` and `<<exclude>>` dependency modeling | [View Use Case PDF](docs/Diagrams/UseCaseDiagram_PrivaLens.pdf) |
-| **Evaluation Presentation Deck** | 6-Slide MidTone evaluation deck with architecture diagrams, regulatory matrix, and live demo results | [View Slide Deck PDF](docs/PrivaLens_Proposal_ppt.pdf) |
 | **Master Gantt Chart & Schedule** | 25-task automated project tracking schedule with dynamic progress formulas | [View Excel Gantt](docs/PrivaLens_Gantt_Chart.xlsx) • [View Gantt PDF](docs/PrivaLens_Gantt_Chart.pdf) |
 
 
