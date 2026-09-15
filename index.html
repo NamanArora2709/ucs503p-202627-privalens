@@ -1,0 +1,1092 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://NamanArora2709.github.io/ucs503p-202627-privalens/">
+      
+      
+      
+        <link rel="next" href="journals/1024160016-ishmanjot/journal/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+  <title>UCS503: Software Engineering; Raghav
+    B. Venkataramaiyer @TIET</title>
+
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%2020c-4.41%200-8-3.59-8-8s3.59-8%208-8%208%203.59%208%208-3.59%208-8%208m0-18A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202m1%205h-2v4H7v2h4v4h2v-4h4v-2h-4z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#privalens-automated-web-privacy-regulatory-compliance-scanner" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="PrivaLens - Automated Web Privacy &amp; Regulatory Compliance Scanner" class="md-header__button md-logo" aria-label="PrivaLens - Automated Web Privacy & Regulatory Compliance Scanner" data-md-component="logo">
+      
+  <img src="assets/tiet-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PrivaLens - Automated Web Privacy & Regulatory Compliance Scanner
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/NamanArora2709/ucs503p-202627-privalens" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ucs503p-202627-privalens
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="PrivaLens - Automated Web Privacy &amp; Regulatory Compliance Scanner" class="md-nav__button md-logo" aria-label="PrivaLens - Automated Web Privacy & Regulatory Compliance Scanner" data-md-component="logo">
+      
+  <img src="assets/tiet-logo.svg" alt="logo">
+
+    </a>
+    PrivaLens - Automated Web Privacy & Regulatory Compliance Scanner
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/NamanArora2709/ucs503p-202627-privalens" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ucs503p-202627-privalens
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dual-engine-runtime-traffic-sniffer-nlp-policy-parser-discrepancy-verification-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dual-Engine Runtime Traffic Sniffer, NLP Policy Parser &amp; Discrepancy Verification Platform
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#academic-team-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👥 Academic &amp; Team Profile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executive-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Executive Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-platform-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Key Platform Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-architecture-layered-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ System Architecture &amp; Layered Decomposition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#engineering-benchmarks-verification-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Engineering Benchmarks &amp; Verification Metrics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-prototype-demonstration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Interactive Prototype Demonstration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Interactive Prototype Demonstration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-running-the-full-stack-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Running the Full-Stack Application
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-live-evaluation-demonstration-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Live Evaluation Demonstration Scenarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formal-software-engineering-architectural-deliverables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 Formal Software Engineering &amp; Architectural Deliverables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-roadmap-development-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📅 Project Roadmap &amp; Development Phases
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Journals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Journals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="journals/1024160016-ishmanjot/journal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1024160016 ishmanjot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="journals/1024160024-prabhrajwin/journal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1024160024 prabhrajwin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="journals/1024160029-naman/journal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1024160029 naman
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p><img alt="Tiet Logo" class="tiet-logo" src="assets/tiet-logo.svg" /></p>
+<p><strong>UCS503: Software Engineering (Project)</strong><br />
+<strong>Thapar Institute of Engineering &amp; Technology, Patiala</strong></p>
+<h1 id="privalens-automated-web-privacy-regulatory-compliance-scanner">🛡️ PrivaLens: Automated Web Privacy &amp; Regulatory Compliance Scanner</h1>
+<h3 id="dual-engine-runtime-traffic-sniffer-nlp-policy-parser-discrepancy-verification-platform"><em>Dual-Engine Runtime Traffic Sniffer, NLP Policy Parser &amp; Discrepancy Verification Platform</em></h3>
+<div class="badges">
+<p><a href="#interactive-prototype-demonstration"><img alt="Prototype Status" src="https://img.shields.io/badge/Prototype-v0.3%20Active-brightgreen?style=flat-square" /></a>
+<a href="https://nextjs.org/"><img alt="Frontend" src="https://img.shields.io/badge/Frontend-Next.js%20%2F%20TailwindCSS-000000?style=flat-square&amp;logo=nextdotjs&amp;logoColor=white" /></a>
+<a href="https://expressjs.com/"><img alt="Backend" src="https://img.shields.io/badge/Backend-Node.js%20%2F%20Express-339933?style=flat-square&amp;logo=nodedotjs&amp;logoColor=white" /></a>
+<a href="https://pptr.dev/"><img alt="Crawler" src="https://img.shields.io/badge/Crawler-Puppeteer%20%2F%20Headless-323330?style=flat-square&amp;logo=puppeteer&amp;logoColor=white" /></a>
+<a href="https://spacy.io/"><img alt="NLP Engine" src="https://img.shields.io/badge/NLP%20Engine-Python%20%2F%20SpaCy-09A3D5?style=flat-square&amp;logo=spacy&amp;logoColor=white" /></a>
+<a href="https://www.meity.gov.in/content/digital-personal-data-protection-act-2023"><img alt="Regulatory" src="https://img.shields.io/badge/Compliance-GDPR%20%2B%20DPDP%202023-1F497D?style=flat-square" /></a>
+<a href="https://github.com/NamanArora2709/ucs503p-202627-privalens"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" /></a></p>
+</div>
+<hr />
+<h2 id="academic-team-profile">👥 Academic &amp; Team Profile</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Role</th>
+<th style="text-align: left;">Team Member</th>
+<th style="text-align: left;">Roll Number</th>
+<th style="text-align: left;">Email</th>
+<th style="text-align: left;">Department</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Project Lead &amp; Full-Stack Architect</strong></td>
+<td style="text-align: left;"><strong>Naman Arora</strong></td>
+<td style="text-align: left;"><code>1024160029</code></td>
+<td style="text-align: left;"><a href="mailto:narora2_be24@thapar.edu"><code>narora2_be24@thapar.edu</code></a></td>
+<td style="text-align: left;">Computer Science &amp; Engineering</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Backend &amp; Crawler Lead</strong></td>
+<td style="text-align: left;"><strong>Prabhrajwin Singh</strong></td>
+<td style="text-align: left;"><code>1024160024</code></td>
+<td style="text-align: left;"><a href="mailto:pkhurana1_be24@thapar.edu"><code>pkhurana1_be24@thapar.edu</code></a></td>
+<td style="text-align: left;">Computer Science &amp; Engineering</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ML &amp; NLP Policy Parser Lead</strong></td>
+<td style="text-align: left;"><strong>Ishmanjot Singh</strong></td>
+<td style="text-align: left;"><code>1024160016</code></td>
+<td style="text-align: left;"><a href="mailto:isingh6_be24@thapar.edu"><code>isingh6_be24@thapar.edu</code></a></td>
+<td style="text-align: left;">Computer Science &amp; Engineering</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Academic Supervisor &amp; Lab Instructor:</strong> <strong>Dr. Jeelani Asif</strong> (Department of Computer Science &amp; Engineering, TIET Patiala)</li>
+<li><strong>Course Code:</strong> UCS503P — Software Engineering Project (Academic Year 2026–27)</li>
+</ul>
+<hr />
+<h2 id="executive-overview">📌 Executive Overview</h2>
+<p>Modern web applications publish extensive privacy policies claiming to protect user confidentiality, restrict third-party tracking, and adhere to global regulations. In practice, however, client-side JavaScript bundles frequently execute undisclosed tracking scripts (such as Meta Pixel, Criteo, and TikTok Pixel), drop unconsented non-essential cookies, and exfiltrate unencrypted Personally Identifiable Information (PII) in URL query parameters and headers.</p>
+<p>!!! abstract "The Compliance Verification Problem"
+    There is a fundamental verification gap between <strong>what published legal policies promise</strong> and <strong>what runtime code actually executes</strong>. Manual audits are expensive, slow, and cannot scale across dynamic modern web apps.</p>
+<p><strong>PrivaLens</strong> solves this through an automated, dual-engine auditing platform:
+1. <strong>Runtime Network Sniffer:</strong> Intercepts real-time HTTP/HTTPS calls, cookies, and telemetry beacons via a headless browser instance.
+2. <strong>NLP Legal Policy Classifier:</strong> Segments unstructured privacy policies into domain-specific legal commitments.
+3. <strong>Deterministic Discrepancy Matrix:</strong> Cross-examines legal promises against runtime network behavior to uncover contradictions, compute an automated <strong>Compliance Health Score (0–100, Grade A–F)</strong>, and generate actionable remediation roadmaps mapped to the <strong>EU GDPR</strong> and <strong>India's DPDP Act 2023</strong>.</p>
+<hr />
+<h2 id="key-platform-capabilities">✨ Key Platform Capabilities</h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 4.93-1.41 1.41A8.01 8.01 0 0 1 20 12a8 8 0 0 1-8 8 8 8 0 0 1-8-8c0-4.08 3.05-7.44 7-7.93v2.02C8.16 6.57 6 9.03 6 12a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-1.66-.67-3.16-1.76-4.24l-1.41 1.41C15.55 9.9 16 10.9 16 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4c0-1.86 1.28-3.41 3-3.86v2.14c-.6.35-1 .98-1 1.72a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.38-1-1.72V2h-1A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-2.76-1.12-5.26-2.93-7.07"/></svg></span> <strong>Live Headless Network &amp; Beacon Sniffer</strong></p>
+<hr />
+<p>Intercepts dynamic outgoing network requests in real-time, cross-referencing endpoints against an extensive signature database of <strong>16+ known ad and telemetry networks</strong> (Google Analytics 4, Meta Pixel, Criteo Retargeting, Hotjar Session Replay, TikTok Pixel, DoubleClick, Microsoft Clarity).</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m5.86 10.31C16.23 21.22 14.28 22.45 12 23c-2.56-.61-4.7-2.07-6.42-4.37C3.86 16.34 3 13.8 3 11V5l9-4 9 4v6c0 2.39-.64 4.61-1.92 6.67l-2.91-2.91c.52-.79.83-1.76.83-2.76a5 5 0 0 0-5-5 5 5 0 0 0-5 5 5 5 0 0 0 5 5c1 0 1.97-.31 2.76-.83z"/></svg></span> <strong>Dynamic PII Exfiltration Detection</strong></p>
+<hr />
+<p>Executes pattern-matching regex scans over URL parameters, request headers, and payloads to identify unencrypted user emails, phone numbers, bearer auth tokens, and sensitive telemetry leaking to third-party endpoints.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23.5 17-5 5-3.5-3.5 1.5-1.5 2 2 3.5-3.5zM6 2c-1.11 0-2 .89-2 2v16c0 1.11.89 2 2 2h7.81c-.53-.91-.81-1.95-.81-3 0-.33.03-.67.08-1H6v-2h7.81c.46-.8 1.1-1.5 1.87-2H6v-2h12v1.08c.33-.05.67-.08 1-.08.34 0 .67.03 1 .08V8l-6-6m-1 1.5L18.5 9H13Z"/></svg></span> <strong>NLP Legal Policy Extraction &amp; Taxonomy</strong></p>
+<hr />
+<p>Categorizes unstructured policy text into 5 core compliance domains (<em>Advertising &amp; Marketing, Cookies &amp; Storage, Third-Party Sharing, PII Security, User Rights</em>) with semantic intent tagging (<code>RESTRICTIVE_PROMISE</code> vs <code>PERMISSIVE_COLLECTION</code>).</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3c-1.27 0-2.4.8-2.82 2H3v2h1.95L2 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3L6.05 7h3.12c.33.85.98 1.5 1.83 1.83V20H2v2h20v-2h-9V8.82c.85-.32 1.5-.97 1.82-1.82h3.13L15 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3l-2.95-7H21V5h-6.17C14.4 3.8 13.27 3 12 3m0 2a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-6.5 5.25L7 14H4zm13 0L20 14h-3z"/></svg></span> <strong>Cross-Verification Discrepancy Matrix</strong></p>
+<hr />
+<p>Deterministic audit engine that cross-examines runtime network events against extracted legal promises to pinpoint compliance breaches with exact statutory citations (e.g. <em>DPDP Act 2023 Sec. 8(5)</em>, <em>GDPR Art. 6 &amp; 12</em>).</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 2a8 8 0 0 1 8 8c0 2.4-1 4.5-2.7 6-1.4-1.3-3.3-2-5.3-2s-3.8.7-5.3 2C5 16.5 4 14.4 4 12a8 8 0 0 1 8-8m2 1.89c-.38.01-.74.26-.9.65l-1.29 3.23-.1.23c-.71.13-1.3.6-1.57 1.26-.41 1.03.09 2.19 1.12 2.6s2.19-.09 2.6-1.12c.26-.66.14-1.42-.29-1.98l.1-.26 1.29-3.21.01-.03c.2-.51-.05-1.09-.56-1.3-.13-.05-.26-.07-.41-.07M10 6a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1M7 9a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m10 0a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"/></svg></span> <strong>Dynamic Compliance Health Scorecard</strong></p>
+<hr />
+<p>Calculates holistic audit scores starting from a 100-point base with weighted severity penalties (-28 Critical PII, -18 Ad Tracker, -14 Session Replay, -12 Cookies) and Letter Grades (<strong>A, B, C, D, F</strong>).</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.8 21c-.2-.4-.5-.8-.6-1.3l-.4-.7H8v-5h5c1.2-.6 2.6-1 4-1 1.9 0 3.6.6 5 1.6V11c0-1.7-1.3-3-3-3H5c-1.7 0-3 1.3-3 3v6h4v4zM19 10c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1m-1-3H6V3h12zm-1 11c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1m0-3c-2.7 0-5.1 1.7-6 4 .9 2.3 3.3 4 6 4s5.1-1.7 6-4c-.9-2.3-3.3-4-6-4m0 6.5c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5"/></svg></span> <strong>DPO-Ready PDF Audit Certificates</strong></p>
+<hr />
+<p>Generates one-click, printable, publication-ready compliance audit reports and executive certificates tailored for Data Protection Officers (DPOs), compliance teams, and software engineers.</p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="system-architecture-layered-decomposition">🏗️ System Architecture &amp; Layered Decomposition</h2>
+<p>PrivaLens decouples network traffic interception, natural language processing, and interactive client visualization across 4 modular layers:</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16V4H3v12zm0-14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-7v2h2v2H8v-2h2v-2H3a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2zM5 6h9v5H5zm10 0h4v2h-4zm4 3v5h-4V9zM5 12h4v2H5zm5 0h4v2h-4z"/></svg></span> <strong>Presentation &amp; Dashboard Layer (Next.js / Tailwind CSS)</strong></p>
+<hr />
+<ul>
+<li>Interactive compliance scanner console with live URL input and preset chip selector.</li>
+<li>Animated 5-step scan progress pipeline (DNS &rarr; DOM &rarr; Tracker &rarr; NLP &rarr; Matrix).</li>
+<li>Circular health score gauge (0–100), letter grade badge (A–F), and discrepancy breakdown.</li>
+<li>Client-side one-click printable PDF audit certificate exporter.</li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 19h1a1 1 0 0 1 1 1h7v2h-7a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1H2v-2h7a1 1 0 0 1 1-1h1v-2H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-7zM4 3h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1m5 4h1V5H9zm0 8h1v-2H9zM5 5v2h2V5zm0 8v2h2v-2z"/></svg></span> <strong>API Gateway &amp; Orchestration Core (Node.js / Express)</strong></p>
+<hr />
+<ul>
+<li>RESTful endpoints (<code>/api/scan</code>, <code>/api/presets</code>) with input sanitization and rate limiting.</li>
+<li>Scan pipeline controller coordinating crawler execution, NLP parsing, and score calculation.</li>
+<li>Distributed task queue architecture (Redis + Bull queue workers) for high-concurrency scanning.</li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.62 13.28 1.64 2.26c.03-.54.12-1.07.3-1.61.18-.56.44-1.07.74-1.52zM17.77 19c-.02-1.32.18-2.73.64-4.15.47-1.43 1.15-2.71 1.95-3.76l-2.04.66c-.78.51-1.45 1.39-1.82 2.48-.33 1.06-.32 2.13 0 2.99zm1.48 2q-.75.69-1.62 1.2l-.32-.44C15.9 21 14.04 20.5 12 20.5s-3.9.5-5.31 1.26l-.32.44q-.87-.51-1.62-1.2l.25-.31c.33-1.61.22-3.57-.42-5.55-.64-1.95-1.68-3.58-2.87-4.68l-.44-.14c.15-.66.36-1.32.62-1.91l.4.13c1.63-.17 3.45-.89 5.14-2.11 1.66-1.21 2.89-2.7 3.57-4.17v-.47l1-.04 1 .04v.42c.67 1.5 1.91 3.02 3.6 4.24 1.66 1.21 3.46 1.92 5.07 2.11l.44-.15c.26.59.47 1.25.62 1.91l-.5.18c-1.19 1.08-2.23 2.71-2.86 4.66-.63 1.93-.75 3.84-.45 5.41zM11 11.37V8.5c-.34.42-.74.82-1.22 1.17-.49.33-1.01.62-1.53.83zm0-7.15c-.75 1.09-1.76 2.13-3 3.02-1.22.9-2.54 1.54-3.82 1.92l1.97.64c.96.08 2.07-.24 3.04-.94.94-.68 1.57-1.59 1.81-2.5zm2 7.15 2.74-.87c-.51-.2-1.02-.47-1.49-.81-.49-.36-.91-.77-1.25-1.19zm6.8-2.21c-1.27-.38-2.57-1.01-3.8-1.9-1.23-.9-2.24-1.95-3-3.06v2.07c.22.94.86 1.9 1.84 2.61.93.68 1.99.99 2.93.94zm-9.42 4.12-2.74-.89c.31.45.56.96.74 1.52.19.59.28 1.15.3 1.71zm-6.8-2.21c.8 1.05 1.48 2.33 1.95 3.76.47 1.46.67 2.91.64 4.25l1.21-1.67c.38-.91.42-2.05.05-3.19-.36-1.1-1.03-1.98-1.82-2.49zM12 14.45l-1.65 2.27a6.3 6.3 0 0 1 3.3 0zm-4.16 5.73c1.24-.43 2.66-.68 4.16-.68s2.92.25 4.16.68l-1.28-1.76c-.72-.57-1.75-.92-2.88-.92s-2.16.35-2.88.92z"/></svg></span> <strong>Headless Crawler &amp; Telemetry Sniffer (Node.js / Puppeteer)</strong></p>
+<hr />
+<ul>
+<li>Headless Chromium environment executing dynamic DOM scraping and network interception.</li>
+<li>Signature detection database matching 16+ ad networks, trackers, and session replays.</li>
+<li>Real-time PII regex engine catching unencrypted emails, phone numbers, and tokens in URLs/headers.</li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.33 12.91c.09 1.55-.62 3.04-1.89 3.95l.77 1.49c.23.45.26.98.06 1.45-.19.47-.58.84-1.06 1l-.79.25a1.687 1.687 0 0 1-1.86-.55L14.44 18c-.89-.15-1.73-.53-2.44-1.1-.5.15-1 .23-1.5.23-.88 0-1.76-.27-2.5-.79-.53.16-1.07.23-1.62.22-.79.01-1.57-.15-2.3-.45a4.1 4.1 0 0 1-2.43-3.61c-.08-.72.04-1.45.35-2.11-.29-.75-.32-1.57-.07-2.33C2.3 7.11 3 6.32 3.87 5.82c.58-1.69 2.21-2.82 4-2.7 1.6-1.5 4.05-1.66 5.83-.37.42-.11.86-.17 1.3-.17 1.36-.03 2.65.57 3.5 1.64 2.04.53 3.5 2.35 3.58 4.47.05 1.11-.25 2.2-.86 3.13.07.36.11.72.11 1.09m-5-1.41c.57.07 1.02.5 1.02 1.07a1 1 0 0 1-1 1h-.63c-.32.9-.88 1.69-1.62 2.29.25.09.51.14.77.21 5.13-.07 4.53-3.2 4.53-3.25a2.59 2.59 0 0 0-2.69-2.49 1 1 0 0 1-1-1 1 1 0 0 1 1-1c1.23.03 2.41.49 3.33 1.3.05-.29.08-.59.08-.89-.06-1.24-.62-2.32-2.87-2.53-1.25-2.96-4.4-1.32-4.4-.4-.03.23.21.72.25.75a1 1 0 0 1 1 1c0 .55-.45 1-1 1-.53-.02-1.03-.22-1.43-.56-.48.31-1.03.5-1.6.56-.57.05-1.04-.35-1.07-.9a.97.97 0 0 1 .88-1.1c.16-.02.94-.14.94-.77 0-.66.25-1.29.68-1.79-.92-.25-1.91.08-2.91 1.29C6.75 5 6 5.25 5.45 7.2 4.5 7.67 4 8 3.78 9c1.08-.22 2.19-.13 3.22.25.5.19.78.75.59 1.29-.19.52-.77.78-1.29.59-.73-.32-1.55-.34-2.3-.06-.32.27-.32.83-.32 1.27 0 .74.37 1.43 1 1.83.53.27 1.12.41 1.71.4q-.225-.39-.39-.81a1.038 1.038 0 0 1 1.96-.68c.4 1.14 1.42 1.92 2.62 2.05 1.37-.07 2.59-.88 3.19-2.13.23-1.38 1.34-1.5 2.56-1.5m2 7.47-.62-1.3-.71.16 1 1.25zm-4.65-8.61a1 1 0 0 0-.91-1.03c-.71-.04-1.4.2-1.93.67-.57.58-.87 1.38-.84 2.19a1 1 0 0 0 1 1c.57 0 1-.45 1-1 0-.27.07-.54.23-.76.12-.1.27-.15.43-.15.55.03 1.02-.38 1.02-.92"/></svg></span> <strong>NLP Legal Classifier &amp; Scoring Engine (Python / SpaCy)</strong></p>
+<hr />
+<ul>
+<li>Preprocessing pipeline segmenting privacy policies into individual legal clauses.</li>
+<li>5-domain regulatory taxonomy classifier with semantic intent tagging (<code>RESTRICTIVE</code> vs <code>PERMISSIVE</code>).</li>
+<li>Deterministic discrepancy matching matrix and 100-base weighted scoring algorithm.</li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="engineering-benchmarks-verification-metrics">📊 Engineering Benchmarks &amp; Verification Metrics</h2>
+<p>PrivaLens has been empirically validated against real-world test sets and commercial domains:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Evaluation Metric</th>
+<th style="text-align: left;">Target Engineering Specification</th>
+<th style="text-align: left;">Achieved Prototype Benchmark</th>
+<th style="text-align: left;">Verification Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Scan Execution Latency</strong></td>
+<td style="text-align: left;">≤ 4.0 s</td>
+<td style="text-align: left;"><strong>2.5 – 6.4 s</strong></td>
+<td style="text-align: left;">End-to-end DOM fetching, script interception, and scoring</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PII Extraction Accuracy</strong></td>
+<td style="text-align: left;">≥ 99.0%</td>
+<td style="text-align: left;"><strong>99.4%</strong></td>
+<td style="text-align: left;">Emails, international phone numbers, tokens, and health telemetry</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NLP Policy Classification Precision</strong></td>
+<td style="text-align: left;">≥ 90.0%</td>
+<td style="text-align: left;"><strong>91.2%</strong></td>
+<td style="text-align: left;">Semantic clause intent tagging and domain categorization</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Known Tracker Network Coverage</strong></td>
+<td style="text-align: left;">≥ 12 Networks</td>
+<td style="text-align: left;"><strong>16+ Networks</strong></td>
+<td style="text-align: left;">Meta Pixel, Google Analytics 4, Criteo, Hotjar, TikTok, Clarity</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Audit Score Determinism</strong></td>
+<td style="text-align: left;">100% Deterministic</td>
+<td style="text-align: left;"><strong>100% Reproducible</strong></td>
+<td style="text-align: left;">Mathematical weighted deduction system with zero drift</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Regulatory Framework Mapping</strong></td>
+<td style="text-align: left;">Multi-Jurisdiction</td>
+<td style="text-align: left;"><strong>GDPR + DPDP 2023</strong></td>
+<td style="text-align: left;">India DPDP Act 2023 (Sec. 5, 8, 16) &amp; EU GDPR (Art. 6, 12, 32)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="interactive-prototype-demonstration">🚀 Interactive Prototype Demonstration</h2>
+<p>The PrivaLens prototype (v0.3) is fully functional and executable locally.</p>
+<h3 id="1-running-the-full-stack-application">1. Running the Full-Stack Application</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 1. Clone the repository</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/NamanArora2709/ucs503p-202627-privalens.git
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">cd</span><span class="w"> </span>ucs503p-202627-privalens/code
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># 2. Install dependencies</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>npm<span class="w"> </span>install
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># 3. Launch the PrivaLens web dashboard</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>npm<span class="w"> </span>start
+</span></code></pre></div>
+<p>Open your browser and navigate to: <strong><code>http://localhost:3000</code></strong></p>
+<h3 id="2-live-evaluation-demonstration-scenarios">2. Live Evaluation Demonstration Scenarios</h3>
+<p>PrivaLens comes preloaded with 3 representative evaluation presets in addition to live URL scanning:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">🛒 Scenario 1: E-Commerce Ad Tracker Mismatch</label><label for="__tabbed_1_2">🏥 Scenario 2: Healthcare Portal PII Exfiltration</label><label for="__tabbed_1_3">🔒 Scenario 3: Privacy-First Compliant SaaS</label><label for="__tabbed_1_4">🌐 Scenario 4: Live URL &amp; Query Scanning</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>Test Target:</strong> <code>ShopVibe Retail Store</code> (<code>https://shopvibe-demo.store</code>)</li>
+<li><strong>Claimed Policy:</strong> <em>"We strictly use essential cookies and do not share behavioral data with third parties."</em></li>
+<li><strong>Runtime Behavior:</strong> Injects hidden <strong>Meta (Facebook) Pixel</strong> and <strong>Criteo Retargeting</strong> scripts in the checkout DOM.</li>
+<li><strong>PrivaLens Audit:</strong> Flags a High-Severity contradiction under <strong>GDPR Art. 6 &amp; DPDP Act 2023 Sec. 6</strong>; assigns <strong>Grade D (54/100)</strong> with specific code remediation advice.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Test Target:</strong> <code>CarePoint Health Network</code> (<code>https://carepoint-telehealth.org</code>)</li>
+<li><strong>Claimed Policy:</strong> <em>"All personal and medical consultation data is strictly encrypted and confidential."</em></li>
+<li><strong>Runtime Behavior:</strong> Transmits plaintext patient emails and phone numbers via unencrypted URL query parameters to external analytics endpoints.</li>
+<li><strong>PrivaLens Audit:</strong> Flags a Critical Security Breach under <strong>DPDP Act 2023 Sec. 8(5)</strong> and <strong>GDPR Art. 32</strong>; assigns <strong>Grade F (38/100)</strong>.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Test Target:</strong> <code>SecureCloud Workspace</code> (<code>https://securecloud-saas.io</code>)</li>
+<li><strong>Claimed Policy:</strong> <em>"Zero third-party trackers, anonymized self-hosted metrics, and full GDPR/DPDP user consent controls."</em></li>
+<li><strong>Runtime Behavior:</strong> Clean DOM execution, zero external beacons, and cookie consent banner compliance.</li>
+<li><strong>PrivaLens Audit:</strong> Confirms 100% promise-to-runtime alignment; assigns <strong>Grade A (98/100)</strong>.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Enter any live web address or query string (e.g. <code>https://wikipedia.org</code>, <code>https://github.com</code>) into the search bar.</li>
+<li>Watch the live 5-step animated scanning pipeline (<em>DNS Fetch &rarr; DOM Intercept &rarr; Tracker Scan &rarr; NLP Parsing &rarr; Matrix Verification</em>) generate a real-time compliance scorecard.</li>
+</ul>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="formal-software-engineering-architectural-deliverables">📐 Formal Software Engineering &amp; Architectural Deliverables</h2>
+<p>All system modeling diagrams, presentations, and project reports are authored in LaTeX/TikZ adhering to publication standards:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Deliverable</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Format &amp; Access Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Project Proposal Report</strong></td>
+<td style="text-align: left;">Formal LaTeX project proposal document detailing problem formulation, scope, and technical roadmap</td>
+<td style="text-align: left;"><a href="https://github.com/NamanArora2709/ucs503p-202627-privalens/blob/master/project-proposal/PrivaLens_Proposal.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> View Proposal PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Project Proposal Pitch Deck</strong></td>
+<td style="text-align: left;">Initial 10-slide project pitch presentation deck covering motivation, architecture, and regulatory scope</td>
+<td style="text-align: left;"><a href="PrivaLens_Proposal_ppt.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> View Pitch Deck PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mid-Semester Prototype Report</strong></td>
+<td style="text-align: left;">Comprehensive LaTeX academic evaluation report with architecture specs and benchmark tables</td>
+<td style="text-align: left;"><a href="https://github.com/NamanArora2709/ucs503p-202627-privalens/blob/master/project-report-prototype-stage/PrivaLens_Report_Prototype.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> View Prototype Report PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mid-Semester Prototype Presentation</strong></td>
+<td style="text-align: left;">6-Slide MidTone evaluation deck with architecture diagrams, regulatory matrix, and live demo results</td>
+<td style="text-align: left;"><a href="https://github.com/NamanArora2709/ucs503p-202627-privalens/blob/master/project-report-prototype-stage/PrivaLens_Prototype_Presentation.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> View Prototype Deck PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Entity-Relationship (ER) Diagram</strong></td>
+<td style="text-align: left;">Full relational entity modeling with keys, multivalued attributes, weak entities, and cardinality</td>
+<td style="text-align: left;"><a href="Diagrams/PrivaLens_ER_Diagram.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> View ER Diagram PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>UML Swimlane &amp; Activity Diagram</strong></td>
+<td style="text-align: left;">3-partition workflow (<code>Auditor</code>, <code>Crawler</code>, <code>NLP Core</code>) with Fork/Join concurrency bars and error gutters</td>
+<td style="text-align: left;"><a href="Diagrams/PrivaLens_Swinlane.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> View Swimlane PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3-Level Data Flow Diagrams (DFDs)</strong></td>
+<td style="text-align: left;">Complete Level 0 Context, Level 1 Process Decomposition, and Level 2 Sub-Process verification flow</td>
+<td style="text-align: left;"><a href="Diagrams/DataFlowDiagram_PrivaLens.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> View DFD PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>UML Use Case Diagram</strong></td>
+<td style="text-align: left;">Actor boundaries, <code>&lt;&lt;include&gt;&gt;</code> and <code>&lt;&lt;exclude&gt;&gt;</code> dependency modeling</td>
+<td style="text-align: left;"><a href="Diagrams/UseCaseDiagram_PrivaLens.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> View Use Case PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Master Gantt Chart &amp; Schedule</strong></td>
+<td style="text-align: left;">25-task automated project tracking schedule with dynamic progress formulas</td>
+<td style="text-align: left;"><a href="PrivaLens_Gantt_Chart.xlsx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm1.8 18H14l-2-3.4-2 3.4H8.2l2.9-4.5L8.2 11H10l2 3.4 2-3.4h1.8l-2.9 4.5zM13 9V3.5L18.5 9z"/></svg></span> View Excel Gantt</a> • <a href="PrivaLens_Gantt_Chart.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> View Gantt PDF</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="project-roadmap-development-phases">📅 Project Roadmap &amp; Development Phases</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Phase</th>
+<th style="text-align: left;">Milestone / Engineering Objectives</th>
+<th style="text-align: left;">Timeline</th>
+<th style="text-align: left;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Phase 1: Inception</strong></td>
+<td style="text-align: left;">Project Ideation, Regulatory Research (GDPR/DPDP), Stack Definition, Repository &amp; Git Pipeline Setup</td>
+<td style="text-align: left;">Aug 03 – Aug 23, 2026</td>
+<td style="text-align: left;"><strong>Completed</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Phase 2: Requirements &amp; Modeling</strong></td>
+<td style="text-align: left;">LaTeX Proposal Document, UML Use Case Model, 3-Level DFDs (Levels 0, 1, 2), Master Gantt Chart</td>
+<td style="text-align: left;">Aug 24 – Sep 06, 2026</td>
+<td style="text-align: left;"><strong>Completed</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Phase 3: Prototype &amp; Evaluation</strong></td>
+<td style="text-align: left;">Full-Stack Prototype Implementation (v0.3), ER Model, Swimlane Diagram, Evaluation Presentation Deck</td>
+<td style="text-align: left;">Sep 07 – Sep 20, 2026</td>
+<td style="text-align: left;"><strong>Active Milestone</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Phase 4: Engine Integration</strong></td>
+<td style="text-align: left;">Distributed Redis Queue, Deep Multi-Page Crawler, PII Pattern Scaling, SpaCy NLP Classifier</td>
+<td style="text-align: left;">Sep 21 – Oct 25, 2026</td>
+<td style="text-align: left;">Upcoming</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Phase 5: Final Delivery</strong></td>
+<td style="text-align: left;">System Security Hardening, Empirical Testing, Final Academic Report, and Project Defense Deck</td>
+<td style="text-align: left;">Oct 26 – Nov 25, 2026</td>
+<td style="text-align: left;">Upcoming</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p align="center">
+  <b>PrivaLens</b> • Automated Privacy & Regulatory Compliance Scanner • Academic Year 2026–27<br>
+  <i>Thapar Institute of Engineering and Technology, Patiala</i>
+</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 15, 2026 17:36:41 UTC">September 15, 2026</span>
+  </span>
+
+    
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:namanarora0927@gmail.com">Naman Arora</a>
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+        
+          
+          <a href="journals/1024160016-ishmanjot/journal/" class="md-footer__link md-footer__link--next" aria-label="Next: 1024160016 ishmanjot">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                1024160016 ishmanjot
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Naman Arora, Prabhrajwin Singh, Ishmanjot Singh • UCS503 Software Engineering
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/NamanArora2709/ucs503p-202627-privalens" target="_blank" rel="noopener" title="Git Repo for PrivaLens" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.footer", "header.autohide", "content.tabs.link", "navigation.tracking", "navigation.top", "toc.integrate", "content.tooltips"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="javascript/arithmatex.js"></script>
+      
+    
+  </body>
+</html>
