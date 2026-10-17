@@ -40,3 +40,19 @@
 - Integrated Redis connection handlers and worker dispatch listeners into the Express API gateway.
 - Conducted latency and resource benchmarking for headless Puppeteer execution across 10 sample commercial domains, achieving an average 6.4s scan turnaround.
 - Provided technical inputs and crawler performance metrics for Section 2.2.1 and Table 3.1 of the Prototype Evaluation Report.
+
+## Week 8 (Sep 21 - Sep 27): Headless Crawler Resilience & Timeout Tuning
+- Enhanced Puppeteer launch parameters with stealth evasion flags to bypass bot detection on heavily guarded commercial websites.
+- Implemented robust request intercept timeouts and error-recovery handlers to prevent hanging scans on slow third-party CDNs.
+
+## Week 9 (Sep 28 - Oct 4): Tracker Signature Catalog Expansion
+- Updated the known third-party tracker signature catalog to include emerging telemetry endpoints and session replay SDKs.
+- Tested regex matching efficiency against compressed network payloads and minified scripts.
+
+## Week 10 (Oct 5 - Oct 11): Class Diagram Review & Crawler Architecture Alignment
+- Reviewed the structural definitions for `NetworkSniffer`, `TrackingSignatureDB`, and `NetworkEvidenceLog` authored solely by Naman in the UML Class Diagram.
+- Verified relational database associations and foreign key mappings with the Crawler module.
+
+## Week 11 (Oct 12 - Oct 18): Sequence Workflow Verification & Crawler Job Queue Testing
+- Reviewed the dynamic scan dispatch and network telemetry return flow authored solely by Naman in the UML Sequence Diagram.
+- Conducted stress testing on the Redis/Bull task queue with concurrent scan requests to measure queue latency and memory consumption.

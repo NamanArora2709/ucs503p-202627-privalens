@@ -37,3 +37,19 @@
 - Executed empirical test runs on the NLP policy extraction engine across 15 real-world corporate privacy policies to validate classification accuracy (achieving 91.2% precision on consent clause segmentation).
 - Formulated test scenarios to evaluate penalty score weightings in the compliance health calculator, confirming zero false-positive flags on legitimate analytics declarations.
 - Contributed regulatory analysis, taxonomy definitions, and benchmark validation data for Sections 2.2.2 and 4.2 of the Mid-Semester Prototype Evaluation Report.
+
+## Week 8 (Sep 21 - Sep 27): NLP Intent Extraction Rule Hardening
+- Refined regex and semantic intent classification rules to improve accuracy on ambiguous privacy policy disclaimers.
+- Tested edge-case statements regarding third-party vendor analytics and cross-border data transfers.
+
+## Week 9 (Sep 28 - Oct 4): Regulatory Penalty Weight Validation
+- Worked on mathematical penalty deduction calibration, ensuring critical PII breaches incur higher deductions than minor cookie consent notices.
+- Verified compliance rules against DPDP Act 2023 Section 8(5) requirements for personal data breach notification.
+
+## Week 10 (Oct 5 - Oct 11): Class Diagram Review & NLP Pipeline Domain Alignment
+- Reviewed the structural entity specifications for `PolicyParser`, `ClauseClassifier`, and `LegalClause` authored solely by Naman in the UML Class Diagram.
+- Confirmed method signatures and attribute data structures for NLP intent tagging in the system architecture.
+
+## Week 11 (Oct 12 - Oct 18): Sequence Workflow Verification & Benchmark Dataset Expansion
+- Reviewed the sequence execution order for policy extraction and obligation tagging authored solely by Naman in the UML Sequence Diagram.
+- Expanded the NLP validation dataset to 25 commercial privacy statements to test classification precision under real-world domain variations.

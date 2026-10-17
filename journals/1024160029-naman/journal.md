@@ -44,3 +44,29 @@
 - Designed and generated the 6-slide **MidTone Prototype Presentation Deck** (`PrivaLens_Prototype_Presentation.pptx`) incorporating custom data flow diagrams, regulatory framework logic, live prototype demonstration cards, and quantitative engineering metrics.
 - Updated and synchronized the automated **Master Gantt Schedule** (`docs/PrivaLens_Gantt_Chart.xlsx` and PDF export) reflecting active Phase 3 milestone completions through September 16, 2026.
 - Coordinated all repository commits, branch management, and GitHub synchronization across all project deliverables.
+
+## Week 8 (Sep 21 - Sep 27): Architecture Refinement & High-Concurrency Pipeline Planning
+- Reviewed instructor feedback from the mid-semester evaluation and planned structural enhancements for high-concurrency auditing.
+- Planned the formal Object-Oriented system architecture to decouple the presentation layer, network interception pipeline, legal NLP policy engine, and compliance discrepancy evaluator.
+- Formulated microservice interface contracts between the Node.js API Gateway and downstream background workers.
+
+## Week 9 (Sep 28 - Oct 4): Object-Oriented Domain Analysis & Verification Matrix Formalization
+- Formalized the complete structural domain model for PrivaLens, defining all 12 core system entities, attribute types, and operational methods.
+- Mapped class relationships, establishing strict inheritance hierarchies for compliance violations (`DiscrepancyViolation` parent with `TrackerViolation`, `CookieViolation`, and `PIIViolation` specialized subclasses).
+- Defined multi-jurisdiction regulatory scoring logic and penalty weight models across GDPR Articles 6, 12, 13, 32 and DPDP Act 2023 Sections 5, 8, 16.
+
+## Week 10 (Oct 5 - Oct 11): UML Class Diagram Engineering in LaTeX/TikZ (Sole Author)
+- **Solely authored, designed, and engineered** the publication-quality **12-Class UML Class Diagram** (`docs/Diagrams/Class_Diagram_PrivaLens.pdf`) in LaTeX using TikZ from scratch.
+- Modeled structural components across four distinct architectural tiers:
+  - *Client & Presentation Tier:* `Auditor` and `WebDashboard` (interactive scan controller, health gauges, and PDF export trigger).
+  - *Crawling & Interception Core:* `NetworkSniffer`, `TrackingSignatureDB`, and `NetworkEvidenceLog` (headless interception and PII telemetry detection).
+  - *NLP Policy Classification Core:* `PolicyParser`, `ClauseClassifier`, and `LegalClause` (segmentation and intent tagging).
+  - *Verification & Scoring Core:* `DiscrepancyEngine`, `VerificationMatrix`, and `DiscrepancyViolation` with its inheritance hierarchy.
+- Implemented clean orthogonal routing, standard UML visibility adornments (`+`, `-`, `#`), exact multiplicity annotations (`1`, `1..*`, `0..*`), and an inheritance fork (`<|--`) with zero line collisions, fitting precisely on a single A4 page.
+
+## Week 11 (Oct 12 - Oct 18): UML Sequence Diagram Engineering & Master Documentation Synchronization (Sole Author)
+- **Solely authored, designed, and engineered** the comprehensive **UML Sequence Diagram** (`docs/Diagrams/SequenceDiagram_PrivaLens.pdf`) adhering to Visual Paradigm industry publication standards in LaTeX/TikZ.
+- Modeled the end-to-end interactive audit workflow across 5 participants: `usr : Auditor` (Actor), `ui : WebDashboard`, `crawler : NetworkSniffer`, `nlp : PolicyParser`, and `engine : DiscrepancyEngine`.
+- Handled all 15 synchronous call messages, dashed return responses, and reflexive self-invocations (request interception, clause classification, and multi-factor compliance score calculation) with border-free labels, perfectly calibrated clearance padding, and zero line overlap.
+- Updated and synchronized the project **Master Gantt Schedule** (`docs/PrivaLens_Gantt_Chart.xlsx`) to reflect Phase 3 prototype completion and active Phase 4 compliance scoring milestones through October 17, 2026.
+- Updated repository documentation (`README.md` and `docs/index.md`) with the new architectural deliverables and project structure, and coordinated Git commits and branch management for the team.
