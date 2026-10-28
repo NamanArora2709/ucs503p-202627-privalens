@@ -38,8 +38,8 @@
 - Integrated the Express REST API with the frontend client and set up local execution environments for seamless demonstration.
 
 ## Week 7 (Sep 14 - Sep 20 / till Sep 16): System Modeling Milestone, Comprehensive Report & Evaluation Deck
-- Designed and engineered the publication-quality **Entity-Relationship (ER) Diagram** (`docs/Diagrams/PrivaLens_ER_Diagram.pdf`) in LaTeX/TikZ, incorporating primary keys, multi-valued attributes, weak entities, identifying relationships, and cardinality notations in a clean pastel color theme with zero overlaps.
-- Designed, tested, and coded the standalone **UML Activity & Swimlane Diagram** (`docs/Diagrams/PrivaLens_Swinlane.pdf`) in TikZ across three architectural partitions (`Auditor Client`, `Crawling & Interception Layer`, `NLP Compliance Core`), implementing concurrency synchronization bars (Fork/Join) and collision-free gutter error routing.
+- Designed and engineered the publication-quality **Entity-Relationship (ER) Diagram** (`docs/Diagrams/PrivaLens_ER_Diagram/PrivaLens_ER_Diagram.pdf`) in LaTeX/TikZ, incorporating primary keys, multi-valued attributes, weak entities, identifying relationships, and cardinality notations in a clean pastel color theme with zero overlaps.
+- Designed, tested, and coded the standalone **UML Activity & Swimlane Diagram** (`docs/Diagrams/PrivaLens_Swinlane/PrivaLens_Swinlane.pdf`) in TikZ across three architectural partitions (`Auditor Client`, `Crawling & Interception Layer`, `NLP Compliance Core`), implementing concurrency synchronization bars (Fork/Join) and collision-free gutter error routing.
 - Authored the exhaustive **Mid-Semester Prototype Evaluation Report** (`project-report-prototype-stage/PrivaLens_Report_Prototype.tex` and `.pdf`) adhering to departmental guidelines, embedding 4 custom TikZ system architecture and pipeline diagrams, testing methodologies, and quantitative benchmarking tables.
 - Designed and generated the 6-slide **MidTone Prototype Presentation Deck** (`PrivaLens_Prototype_Presentation.pptx`) incorporating custom data flow diagrams, regulatory framework logic, live prototype demonstration cards, and quantitative engineering metrics.
 - Updated and synchronized the automated **Master Gantt Schedule** (`docs/PrivaLens_Gantt_Chart.xlsx` and PDF export) reflecting active Phase 3 milestone completions through September 16, 2026.
@@ -56,7 +56,7 @@
 - Defined multi-jurisdiction regulatory scoring logic and penalty weight models across GDPR Articles 6, 12, 13, 32 and DPDP Act 2023 Sections 5, 8, 16.
 
 ## Week 10 (Oct 5 - Oct 11): UML Class Diagram Engineering in LaTeX/TikZ (Sole Author)
-- **Solely authored, designed, and engineered** the publication-quality **12-Class UML Class Diagram** (`docs/Diagrams/Class_Diagram_PrivaLens.pdf`) in LaTeX using TikZ from scratch.
+- **Solely authored, designed, and engineered** the publication-quality **12-Class UML Class Diagram** (`docs/Diagrams/Class_Diagram_PrivaLens/Class_Diagram_PrivaLens.pdf`) in LaTeX using TikZ from scratch.
 - Modeled structural components across four distinct architectural tiers:
   - *Client & Presentation Tier:* `Auditor` and `WebDashboard` (interactive scan controller, health gauges, and PDF export trigger).
   - *Crawling & Interception Core:* `NetworkSniffer`, `TrackingSignatureDB`, and `NetworkEvidenceLog` (headless interception and PII telemetry detection).
@@ -65,8 +65,13 @@
 - Implemented clean orthogonal routing, standard UML visibility adornments (`+`, `-`, `#`), exact multiplicity annotations (`1`, `1..*`, `0..*`), and an inheritance fork (`<|--`) with zero line collisions, fitting precisely on a single A4 page.
 
 ## Week 11 (Oct 12 - Oct 18): UML Sequence Diagram Engineering & Master Documentation Synchronization (Sole Author)
-- **Solely authored, designed, and engineered** the comprehensive **UML Sequence Diagram** (`docs/Diagrams/SequenceDiagram_PrivaLens.pdf`) adhering to Visual Paradigm industry publication standards in LaTeX/TikZ.
+- **Solely authored, designed, and engineered** the comprehensive **UML Sequence Diagram** (`docs/Diagrams/SequenceDiagram_PrivaLens/SequenceDiagram_PrivaLens.pdf`) adhering to Visual Paradigm industry publication standards in LaTeX/TikZ.
 - Modeled the end-to-end interactive audit workflow across 5 participants: `usr : Auditor` (Actor), `ui : WebDashboard`, `crawler : NetworkSniffer`, `nlp : PolicyParser`, and `engine : DiscrepancyEngine`.
 - Handled all 15 synchronous call messages, dashed return responses, and reflexive self-invocations (request interception, clause classification, and multi-factor compliance score calculation) with border-free labels, perfectly calibrated clearance padding, and zero line overlap.
 - Updated and synchronized the project **Master Gantt Schedule** (`docs/PrivaLens_Gantt_Chart.xlsx`) to reflect Phase 3 prototype completion and active Phase 4 compliance scoring milestones through October 17, 2026.
 - Updated repository documentation (`README.md` and `docs/index.md`) with the new architectural deliverables and project structure, and coordinated Git commits and branch management for the team.
+
+## Week 12 (Oct 19 - Oct 28): Modular Architectural Diagram Reorganization & Documentation Verification
+- Reorganized all publication-quality TikZ architectural diagrams into dedicated modular directory packages under docs/Diagrams/ (Class_Diagram_PrivaLens/, SequenceDiagram_PrivaLens/, PrivaLens_ER_Diagram/, PrivaLens_Swinlane/, DataFlowDiagram_PrivaLens/, and UseCaseDiagram_PrivaLens/) to ensure clean asset separation and maintainability.
+- Recompiled and finalized the high-resolution, zero-collision export of SequenceDiagram_PrivaLens.pdf adhering to visual clarity standards.
+- Updated all repository documentation links, tree structures, and project tables across README.md and docs/index.md.
