@@ -124,6 +124,8 @@ ucs503p-202627-privalens/
 │   │   │   └── CollaborationDiagram_PrivaLens.pdf
 │   │   ├── DataFlowDiagram_PrivaLens/      # 3-Level DFDs (Level 0, Level 1, Level 2 Process Decomposition)
 │   │   │   └── DataFlowDiagram_PrivaLens.pdf
+│   │   ├── DeploymentDiagram_PrivaLens/    # 3D Physical Execution & Network Infrastructure Topology
+│   │   │   └── DeploymentDiagram_PrivaLens.pdf
 │   │   ├── PrivaLens_ER_Diagram/           # Entity-Relationship (ER) Relational Schema
 │   │   │   └── PrivaLens_ER_Diagram.pdf
 │   │   ├── PrivaLens_Swinlane/             # 3-Partition UML Activity & Swimlane Concurrency Workflow
@@ -139,7 +141,7 @@ ucs503p-202627-privalens/
 │   ├── PrivaLens_Test_Cases.pdf            # Formal Verification & Validation Test Suite (15 Test Cases, PDF Export)
 │   └── index.md                            # Documentation homepage (MkDocs Material)
 ├── journals/                               # Team weekly engineering work logs (through Oct 28 / Weeks 1 to 12)
-│   ├── 1024160029-naman/journal.md         # Naman Arora (Project Lead & Architect — Sole Author of UML Class, Sequence & Collaboration Diagrams)
+│   ├── 1024160029-naman/journal.md         # Naman Arora (Project Lead & Architect — Sole Author of UML Class, Sequence, Collaboration & Deployment Diagrams)
 │   ├── 1024160024-prabhrajwin/journal.md   # Prabhrajwin Singh (Backend Lead, Weeks 1 to 12)
 │   └── 1024160016-ishmanjot/journal.md     # Ishmanjot Singh (NLP Lead, Weeks 1 to 12)
 ├── project-proposal/                       # LaTeX Academic Proposal Deliverables
@@ -166,6 +168,7 @@ ucs503p-202627-privalens/
 | **UML Class Diagram** | Full 12-class structural architecture, inheritance hierarchy, associations, and multiplicity *(Designed & authored solely by Naman Arora)* | [View Class Diagram PDF](docs/Diagrams/Class_Diagram_PrivaLens/Class_Diagram_PrivaLens.pdf) |
 | **UML Sequence Diagram** | Visual Paradigm standard interaction sequence (`Auditor`, `WebDashboard`, `NetworkSniffer`, `PolicyParser`, `DiscrepancyEngine`) with synchronous calls, returns, and self-invocations *(Designed & authored solely by Naman Arora)* | [View Sequence Diagram PDF](docs/Diagrams/SequenceDiagram_PrivaLens/SequenceDiagram_PrivaLens.pdf) |
 | **UML Collaboration Diagram** | Standard UML Communication model (`Auditor`, `WebDashboard`, `NetworkSniffer`, `PolicyParser`, `DiscrepancyEngine`) with numbered message sequences and self-loops *(Designed & authored solely by Naman Arora)* | [View Collaboration Diagram PDF](docs/Diagrams/CollaborationDiagram_PrivaLens/CollaborationDiagram_PrivaLens.pdf) |
+| **UML Deployment Diagram** | 3D physical execution & hardware architecture (`Auditor Workstation`, `API Gateway`, `Crawler Node`, `NLP Worker`, `Verification Engine`, `Database Server`, `Internal Network Backbone`) *(Designed & authored solely by Naman Arora)* | [View Deployment Diagram PDF](docs/Diagrams/DeploymentDiagram_PrivaLens/DeploymentDiagram_PrivaLens.pdf) |
 | **Entity-Relationship (ER) Diagram** | Full relational entity modeling with keys, multivalued attributes, weak entities, and cardinality | [View ER Diagram PDF](docs/Diagrams/PrivaLens_ER_Diagram/PrivaLens_ER_Diagram.pdf) |
 | **UML Swimlane & Activity Diagram** | 3-partition workflow (`Auditor`, `Crawler`, `NLP Core`) with Fork/Join concurrency bars and error gutters | [View Swimlane PDF](docs/Diagrams/PrivaLens_Swinlane/PrivaLens_Swinlane.pdf) |
 | **3-Level Data Flow Diagrams (DFDs)** | Complete Level 0 Context, Level 1 Process Decomposition, and Level 2 Sub-Process verification flow | [View DFD PDF](docs/Diagrams/DataFlowDiagram_PrivaLens/DataFlowDiagram_PrivaLens.pdf) |
