@@ -211,7 +211,7 @@ All system modeling diagrams, presentations, and project reports are authored in
 | **UML Swimlane & Activity Diagram** | 3-partition workflow (`Auditor`, `Crawler`, `NLP Core`) with Fork/Join concurrency bars and error gutters | [:material-file-pdf-box: View Swimlane PDF](Diagrams/PrivaLens_Swinlane/PrivaLens_Swinlane.pdf) |
 | **3-Level Data Flow Diagrams (DFDs)** | Complete Level 0 Context, Level 1 Process Decomposition, and Level 2 Sub-Process verification flow | [:material-file-pdf-box: View DFD PDF](Diagrams/DataFlowDiagram_PrivaLens/DataFlowDiagram_PrivaLens.pdf) |
 | **UML Use Case Diagram** | Actor boundaries, `<<include>>` and `<<exclude>>` dependency modeling | [:material-file-pdf-box: View Use Case PDF](Diagrams/UseCaseDiagram_PrivaLens/UseCaseDiagram_PrivaLens.pdf) |
-| **Master Gantt Chart & Schedule** | 25-task automated project tracking schedule with dynamic progress formulas (Updated through Oct 17) | [:material-file-excel: View Excel Gantt](PrivaLens_Gantt_Chart.xlsx) • [:material-file-pdf-box: View Gantt PDF](PrivaLens_Gantt_Chart.pdf) |
+| **Master Gantt Chart & Schedule** | 25-task automated project tracking schedule with dynamic progress formulas (Updated through Oct 28) | [:material-file-excel: View Excel Gantt](PrivaLens_Gantt_Chart.xlsx) • [:material-file-pdf-box: View Gantt Part 1 (Weeks 1–8)](PrivaLens_Gantt_Chart_1.pdf) • [:material-file-pdf-box: View Gantt Part 2 (Weeks 9–16)](PrivaLens_Gantt_Chart_2.pdf) |
 
 
 ---
