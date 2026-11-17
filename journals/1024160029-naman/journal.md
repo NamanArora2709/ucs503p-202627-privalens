@@ -76,3 +76,9 @@
 - Recompiled and finalized the high-resolution, zero-collision export of SequenceDiagram_PrivaLens.pdf adhering to visual clarity standards.
 - Updated all repository documentation links, tree structures, and project tables across README.md and docs/index.md.
 - Updated and synchronized the automated Master Gantt Schedule (docs/PrivaLens_Gantt_Chart.xlsx), establishing two full-coverage PDF deliverables under instructor guidance: Part 1 (docs/PrivaLens_Gantt_Chart_1.pdf) covering Weeks 1–8 (Phases 1–3 at 100% completion) and Part 2 (docs/PrivaLens_Gantt_Chart_2.pdf) covering Weeks 9–16 (Phases 4–5 updated through November 17, reflecting Phase 4 completion, comprehensive report submission, and active final viva preparation).
+
+## Week 13 - 15 (Oct 29 - Nov 17): System Verification, Formal Test Suite Formulation & End-to-End Validation
+- Formulated the formal 15-case verification & validation test suite (`docs/PrivaLens_Test_Cases.pdf`) adhering to departmental software engineering templates across Positive, Negative, Boundary, Security, and Functional categories.
+- Executed empirical test runs covering Puppeteer network interception (`PL-CRAWL-001` to `003`), unencrypted PII parameter leaks (`PL-PII-001`), cookie security flags (`PL-COOKIE-001`), rule-based NLP intent classification (`PL-NLP-001` to `003`), automated discrepancy detection (`PL-DISC-001` & `002`), boundary score clamping (`PL-SCORE-001`), Express REST API contracts (`PL-API-001` & `002`), UI radar gauge animations (`PL-UI-001`), and server-side PDF compliance report exports (`PL-REP-001`), achieving a 100% test pass rate (15/15).
+- Compiled and exported the publication-grade landscape PDF document (`docs/PrivaLens_Test_Cases.pdf`) with repeating headers and evidence log references.
+- Updated repository deliverables tables in `README.md` and `docs/index.md`.

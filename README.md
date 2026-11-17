@@ -134,6 +134,7 @@ ucs503p-202627-privalens/
 │   ├── PrivaLens_Gantt_Chart_1.pdf         # Master Gantt Schedule Part 1 (Weeks 1 to 8: Phase 1 to Phase 3, 100% Completed)
 │   ├── PrivaLens_Gantt_Chart_2.pdf         # Master Gantt Schedule Part 2 (Weeks 9 to 16: Phase 4 & Phase 5, through Nov 17)
 │   ├── PrivaLens_Proposal_ppt.pdf          # Project Slide Presentation Deck
+│   ├── PrivaLens_Test_Cases.pdf            # Formal Verification & Validation Test Suite (15 Test Cases, PDF Export)
 │   └── index.md                            # Documentation homepage (MkDocs Material)
 ├── journals/                               # Team weekly engineering work logs (through Oct 28 / Weeks 1 to 12)
 │   ├── 1024160029-naman/journal.md         # Naman Arora (Project Lead & Architect, Weeks 1 to 12 — Sole Author of UML Class & Sequence Diagrams)
@@ -167,6 +168,7 @@ ucs503p-202627-privalens/
 | **3-Level Data Flow Diagrams (DFDs)** | Complete Level 0 Context, Level 1 Process Decomposition, and Level 2 Sub-Process verification flow | [View DFD PDF](docs/Diagrams/DataFlowDiagram_PrivaLens/DataFlowDiagram_PrivaLens.pdf) |
 | **UML Use Case Diagram** | Actor boundaries, `<<include>>` and `<<exclude>>` dependency modeling | [View Use Case PDF](docs/Diagrams/UseCaseDiagram_PrivaLens/UseCaseDiagram_PrivaLens.pdf) |
 | **Master Gantt Chart & Schedule** | 25-task automated project tracking schedule with dynamic progress formulas (Updated through Nov 17) | [View Excel Gantt](docs/PrivaLens_Gantt_Chart.xlsx) • [View Gantt Part 1 (Weeks 1–8)](docs/PrivaLens_Gantt_Chart_1.pdf) • [View Gantt Part 2 (Weeks 9–16)](docs/PrivaLens_Gantt_Chart_2.pdf) |
+| **System Test Cases & Verification Suite** | Formal 15-case verification test suite covering Crawler, PII Interceptor, NLP Parser, Discrepancy Engine, and API Gateway | [View Test Cases PDF](docs/PrivaLens_Test_Cases.pdf) |
 
 
 ---
