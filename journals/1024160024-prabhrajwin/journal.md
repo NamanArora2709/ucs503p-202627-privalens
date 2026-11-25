@@ -56,3 +56,19 @@
 ## Week 11 (Oct 12 - Oct 18): Sequence Workflow Verification & Crawler Job Queue Testing
 - Reviewed the dynamic scan dispatch and network telemetry return flow authored solely by Naman in the UML Sequence Diagram.
 - Conducted stress testing on the Redis/Bull task queue with concurrent scan requests to measure queue latency and memory consumption.
+
+## Week 12 (Oct 19 - Oct 28): REST API Hardening & Distributed Worker Queue Optimization
+- Optimized BullMQ / Redis worker pipeline for asynchronous multi-target crawling, enforcing worker pool resource limits and memory recycling.
+- Hardened Express REST API endpoints with request validation middleware, structured HTTP error schemas (400 Bad Request / 504 Gateway Timeout), and Winston logging.
+- Collaborated with Naman on verifying deployment specifications for the database and worker nodes.
+
+## Week 13 - 14 (Oct 29 - Nov 08): Crawler System Integration & Formal Test Execution
+- Executed end-to-end integration testing between headless Chromium (Puppeteer), Chrome DevTools Protocol (CDP) request interception, and PostgreSQL 16 persistence.
+- Validated crawler and network sniffer formal test cases (`PL-CRAWL-001`, `PL-CRAWL-002`, `PL-CRAWL-003`, `PL-PII-001`, `PL-COOKIE-001`, and `PL-API-001`/`002`) achieving 100% pass rates.
+- Calibrated DNS resolution exception handling (`ERR_NAME_NOT_RESOLVED`) and browser context recycling to guarantee zero zombie Chromium processes.
+
+## Week 15 - 16 (Nov 09 - Nov 26): Production Dockerization, Full System Validation & 100% Delivery
+- Finalized production-grade Docker configuration (`Dockerfile` and `docker-compose.yml`) containerizing the Express API gateway, Redis worker queue, PostgreSQL 16 database, and Puppeteer headless browser runtime.
+- Conducted full audit validation runs alongside Naman and Ishmanjot, verifying that all 15 formal test cases in `docs/PrivaLens_Test_Cases.pdf` render with full step and URL visibility without text clipping.
+- Confirmed 100% milestone completion for all Phase 4 & Phase 5 engineering tasks in the consolidated 16-week master Gantt chart (`docs/PrivaLens_Gantt_Chart.pdf`).
+- Prepared the live deployment infrastructure and containerized demo environment for the final capstone viva and departmental evaluation.

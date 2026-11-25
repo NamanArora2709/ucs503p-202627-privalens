@@ -134,19 +134,17 @@ ucs503p-202627-privalens/
 │   │   │   └── SequenceDiagram_PrivaLens.pdf
 │   │   └── UseCaseDiagram_PrivaLens/       # UML Use Case Diagram (Actor Dependencies & Boundaries)
 │   │       └── UseCaseDiagram_PrivaLens.pdf
-│   ├── PrivaLens_Gantt_Chart.xlsx          # 25-Task Automated Project Master Schedule (Updated through Nov 17)
-│   ├── PrivaLens_Gantt_Chart_1.pdf         # Master Gantt Schedule Part 1 (Weeks 1 to 8: Phase 1 to Phase 3, 100% Completed)
-│   ├── PrivaLens_Gantt_Chart_2.pdf         # Master Gantt Schedule Part 2 (Weeks 9 to 16: Phase 4 & Phase 5, through Nov 17)
-│   ├── PrivaLens_Proposal_ppt.pdf          # Project Slide Presentation Deck
-│   ├── PrivaLens_Test_Cases.pdf            # Formal Verification & Validation Test Suite (15 Test Cases, PDF Export)
+│   ├── PrivaLens_Gantt_Chart.pdf           # Master Gantt Schedule (16 Weeks: Phase 1 to Phase 5, 100% Completed, Single-Page Landscape)
+│   ├── PrivaLens_Test_Cases.pdf            # Formal Verification & Validation Test Suite (15 Test Cases, AutoFit Verified PDF Export)
 │   └── index.md                            # Documentation homepage (MkDocs Material)
-├── journals/                               # Team weekly engineering work logs (through Oct 28 / Weeks 1 to 12)
+├── journals/                               # Team weekly engineering work logs (Full 16-Week Project Lifecycle)
 │   ├── 1024160029-naman/journal.md         # Naman Arora (Project Lead & Architect — Sole Author of UML Class, Sequence, Collaboration & Deployment Diagrams)
-│   ├── 1024160024-prabhrajwin/journal.md   # Prabhrajwin Singh (Backend Lead, Weeks 1 to 12)
-│   └── 1024160016-ishmanjot/journal.md     # Ishmanjot Singh (NLP Lead, Weeks 1 to 12)
+│   ├── 1024160024-prabhrajwin/journal.md   # Prabhrajwin Singh (Backend Lead, Weeks 1 to 16, 100% Completed)
+│   └── 1024160016-ishmanjot/journal.md     # Ishmanjot Singh (NLP Lead, Weeks 1 to 16, 100% Completed)
 ├── project-proposal/                       # LaTeX Academic Proposal Deliverables
 │   ├── PrivaLens_Proposal.pdf              # Compiled Academic Project Proposal (PDF)
-│   └── PrivaLens_Proposal.tex              # Formal LaTeX Proposal Source
+│   ├── PrivaLens_Proposal.tex              # Formal LaTeX Proposal Source
+│   └── PrivaLens_Proposal_ppt.pdf          # Project Slide Presentation Deck (Pitch Deck)
 ├── project-report-prototype-stage/         # Mid-Semester Prototype Evaluation Report
 │   ├── PrivaLens_Prototype_Presentation.pdf # MidTone Prototype Evaluation Deck (PDF)
 │   ├── PrivaLens_Report_Prototype.pdf      # Compiled Mid-Semester Evaluation Report (PDF)
@@ -162,7 +160,7 @@ ucs503p-202627-privalens/
 | Deliverable | Description | Format & Access Link |
 | :--- | :--- | :--- |
 | **Project Proposal Report** | Formal LaTeX project proposal document detailing problem formulation, scope, and technical roadmap | [View Proposal PDF](project-proposal/PrivaLens_Proposal.pdf) |
-| **Project Proposal Pitch Deck** | Initial 10-slide project pitch presentation deck covering motivation, architecture, and regulatory scope | [View Pitch Deck PDF](docs/PrivaLens_Proposal_ppt.pdf) |
+| **Project Proposal Pitch Deck** | Initial 10-slide project pitch presentation deck covering motivation, architecture, and regulatory scope | [View Pitch Deck PDF](project-proposal/PrivaLens_Proposal_ppt.pdf) |
 | **Mid-Semester Prototype Report** | Comprehensive LaTeX academic evaluation report with architecture specs and benchmark tables | [View Prototype Report PDF](project-report-prototype-stage/PrivaLens_Report_Prototype.pdf) |
 | **Mid-Semester Prototype Presentation** | 6-Slide MidTone evaluation deck with architecture diagrams, regulatory matrix, and live demo results | [View Prototype Deck PDF](project-report-prototype-stage/PrivaLens_Prototype_Presentation.pdf) |
 | **UML Class Diagram** | Full 12-class structural architecture, inheritance hierarchy, associations, and multiplicity *(Designed & authored solely by Naman Arora)* | [View Class Diagram PDF](docs/Diagrams/Class_Diagram_PrivaLens/Class_Diagram_PrivaLens.pdf) |
@@ -173,7 +171,7 @@ ucs503p-202627-privalens/
 | **UML Swimlane & Activity Diagram** | 3-partition workflow (`Auditor`, `Crawler`, `NLP Core`) with Fork/Join concurrency bars and error gutters | [View Swimlane PDF](docs/Diagrams/PrivaLens_Swinlane/PrivaLens_Swinlane.pdf) |
 | **3-Level Data Flow Diagrams (DFDs)** | Complete Level 0 Context, Level 1 Process Decomposition, and Level 2 Sub-Process verification flow | [View DFD PDF](docs/Diagrams/DataFlowDiagram_PrivaLens/DataFlowDiagram_PrivaLens.pdf) |
 | **UML Use Case Diagram** | Actor boundaries, `<<include>>` and `<<exclude>>` dependency modeling | [View Use Case PDF](docs/Diagrams/UseCaseDiagram_PrivaLens/UseCaseDiagram_PrivaLens.pdf) |
-| **Master Gantt Chart & Schedule** | 25-task automated project tracking schedule with dynamic progress formulas (Updated through Nov 17) | [View Excel Gantt](docs/PrivaLens_Gantt_Chart.xlsx) • [View Gantt Part 1 (Weeks 1–8)](docs/PrivaLens_Gantt_Chart_1.pdf) • [View Gantt Part 2 (Weeks 9–16)](docs/PrivaLens_Gantt_Chart_2.pdf) |
+| **Master Gantt Chart & Schedule** | 25-task automated project tracking schedule covering full 16-week lifecycle (100% Completed) | [View Gantt PDF (Single Page Landscape)](docs/PrivaLens_Gantt_Chart.pdf) |
 | **System Test Cases & Verification Suite** | Formal 15-case verification test suite covering Crawler, PII Interceptor, NLP Parser, Discrepancy Engine, and API Gateway | [View Test Cases PDF](docs/PrivaLens_Test_Cases.pdf) |
 
 

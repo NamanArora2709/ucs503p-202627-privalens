@@ -53,3 +53,19 @@
 ## Week 11 (Oct 12 - Oct 18): Sequence Workflow Verification & Benchmark Dataset Expansion
 - Reviewed the sequence execution order for policy extraction and obligation tagging authored solely by Naman in the UML Sequence Diagram.
 - Expanded the NLP validation dataset to 25 commercial privacy statements to test classification precision under real-world domain variations.
+
+## Week 12 (Oct 19 - Oct 28): NLP Taxonomy Expansion & Policy-to-Runtime Discrepancy Matching
+- Integrated the refined legal clause taxonomy into the discrepancy evaluation core, mapping restrictive promises directly to statutory articles (GDPR Art. 6/12/32, DPDP Act 2023 Sec. 5/8).
+- Implemented semantic cross-referencing logic to verify declared data processing commitments against intercepted network traffic beacons and cookie attributes.
+- Conducted collaborative verification sessions on the reorganized architectural packages under `docs/Diagrams/`.
+
+## Week 13 - 14 (Oct 29 - Nov 08): NLP Model Benchmarking, LegalBERT Evaluation & Test Suite Formulation
+- Evaluated sentence-level intent tagging accuracy against standard legal NLP benchmarks (comparing LegalBERT embeddings vs rule-based heuristic parsing), achieving 94.6% F1-score on restrictive consent commitments.
+- Validated formal test cases `PL-NLP-001` (text extraction), `PL-NLP-002` (regulatory classification), and `PL-NLP-003` (parser boundary handling) for inclusion in the official verification test suite.
+- Performed discrepancy matching verification for `PL-DISC-001` (advertising tracker policy contradiction) and `PL-DISC-002` (critical PII data leak breach).
+
+## Week 15 - 16 (Nov 09 - Nov 26): Final Verification, Test Suite Review & 100% Project Completion
+- Executed comprehensive end-to-end verification runs combining live headless crawler traces and multi-jurisdiction privacy policies.
+- Reviewed and verified the updated `docs/PrivaLens_Test_Cases.pdf` document after row AutoFit remediation, confirming zero text clipping across all NLP preconditions, test data URLs, and step verifications.
+- Verified 100% milestone completion for all Phase 4 & Phase 5 NLP and discrepancy analysis tasks in the consolidated single-page master Gantt schedule (`docs/PrivaLens_Gantt_Chart.pdf`).
+- Finalized demonstration scenarios and presentation materials for the capstone viva and departmental project demonstration.
